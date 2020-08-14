@@ -1,13 +1,16 @@
 {
     "env": {
         "browser": true,
-        "commonjs": false,
-        "es2020": true
+        "es6": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -19,8 +22,22 @@
         "react"
     ],
     "rules": {
-        "no-unused-vars": "warn",
-        "react/no-unknown-property": "off",
-        "react/no-unescaped-entities": "warn"
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/prop-types": "warn"
     }
 }
