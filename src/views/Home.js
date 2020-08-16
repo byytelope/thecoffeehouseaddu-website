@@ -1,11 +1,13 @@
 import React from "react";
+// import {useSpring, animated} from "react-spring";
+import Navbar from "../components/Navbar";
 
-function Home (props) {
+export default function Home() {
+    // const FadeIn = useSpring({opacity: 1, from: {opacity: 0}});
+    
     return (
-        <div className="font-bold text-4xl text-center">
-            Hello {props.name}
+        <div>
+            <Navbar/>
         </div>
     );
 }
-
-export default Home;
