@@ -1,9 +1,11 @@
 import React from "react";
+import MenuCards from "../components/MenuCards";
 
 export default function Menu() {
     return (
         <div>
-            <h1>Menu</h1>
+            <div className="text-center text-4xl text-gray-700 p-24">./Menu</div>
+            <MenuCards/>
         </div>
     );
 }

@@ -1,44 +1,21 @@
-import React from "react";
-import {
-    BrowserRouter as Router,
-    // Redirect,
-    Route,
-    Link,
-    Switch
-} from "react-router-dom";
-// import Home from "../views/Home";
-import Menu from "../views/Menu";
-import Order from "../views/Order";
-import About from "../views/About";
+import React, { useRef } from "react";
+import HomeText from "../components/HomeText";
+
+import "../assets/css/Logo.css";
+import Logo from "../assets/img/Thumb_TCHM_transparent.png";
+
 
 export default function Header() {
+    const logoRef = useRef();
+
     return (
         <div>
-            <Router>
-                <ul>
-                    {/* <li>
-                        <Link to="/home">Home</Link>
-                    </li> */}
-                    <li>
-                        <Link to="/menu">Menu</Link>
-                    </li>
-                    <li>
-                        <Link to="/order">Shop Coffee</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                </ul>
-                <Switch>   
-                    {/* <Route exact path="/home" component={Home}/> */}
-                    <Route exact path="/menu" component={Menu}/>
-                    <Route exact path="/order" component={Order}/>
-                    <Route exact path="/about" component={About}/>
-                    {/* <Route exact path="/">
-                        <Redirect to="/home"/>
-                    </Route> */}
-                </Switch>
-            </Router>
+            <div className="w-full bg-gray-100 pb-8">
+                <div className="flex justify-center py-8" ref={logoRef} onClick={() => window.scrollTo({behavior: "smooth", top: logoRef.current.offsetTop})}>
+                    <img className="photo" src={Logo} alt="Logo"/>
+                </div>
+                <HomeText/>
+            </div>
         </div>
     );
 }

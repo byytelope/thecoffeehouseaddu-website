@@ -3,7 +3,7 @@ module.exports = {
     theme: {
         extend: {},
         fontFamily: {
-            "sans": ["Victor Mono"]
+            "sans": ["SoleilW01-Bold"]
         }
     },
     variants: {},

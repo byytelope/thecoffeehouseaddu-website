@@ -413,7 +413,7 @@ ul {
  */
 
 html {
-  font-family: Victor Mono; /* 1 */
+  font-family: SoleilW01-Bold; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -6036,7 +6036,7 @@ video {
 }
 
 .font-sans {
-  font-family: Victor Mono;
+  font-family: SoleilW01-Bold;
 }
 
 .font-hairline {
@@ -19894,7 +19894,7 @@ video {
   }
 
   .sm\:font-sans {
-    font-family: Victor Mono;
+    font-family: SoleilW01-Bold;
   }
 
   .sm\:font-hairline {
@@ -33709,7 +33709,7 @@ video {
   }
 
   .md\:font-sans {
-    font-family: Victor Mono;
+    font-family: SoleilW01-Bold;
   }
 
   .md\:font-hairline {
@@ -47524,7 +47524,7 @@ video {
   }
 
   .lg\:font-sans {
-    font-family: Victor Mono;
+    font-family: SoleilW01-Bold;
   }
 
   .lg\:font-hairline {
@@ -61339,7 +61339,7 @@ video {
   }
 
   .xl\:font-sans {
-    font-family: Victor Mono;
+    font-family: SoleilW01-Bold;
   }
 
   .xl\:font-hairline {

@@ -3,7 +3,7 @@ import React from "react";
 export default function Menu() {
     return (
         <div>
-            <h1>About</h1>
+            <div className="text-center text-4xl text-gray-700 p-24">./About Us</div>
         </div>
     );
 }
