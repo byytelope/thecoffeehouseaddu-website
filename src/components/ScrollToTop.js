@@ -1,50 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { TiArrowUp } from "react-icons/ti";
+import "../assets/css/ScrollBtn.css";
 
-export default class ScrollToTop extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            is_visible: false
-        };
-    }
-
-    componentDidMount() {
-        var scrollComponent = this;
-        document.addEventListener("scroll", function(e) {
-            scrollComponent.toggleVisibility();
-        });
-    }
-
-    toggleVisibility() {
-        if (window.pageYOffset > 300) {
-            this.setState({
-                is_visible: true
-            });
-        } else {
-            this.setState({
-                is_visible: false
-            });
-        }
-    }
-
-    scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-
-    render() {
-        return (
-            <div>
-                {this.state && (
-                    <div onClick={() => this.scrollToTop()}>
-                        <svg className="animate-bounce w-6 h-6 text-gray-900" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                        </svg>
-                    </div>
-                )}
-            </div>
-        );
-    }
+export default function ScrollToTop() {
+    const [showScroll, setShowScroll] = useState(false);
+    const checkScrollTop = () => {    
+        if (!showScroll && window.pageYOffset > 400){
+            setShowScroll(true);    
+        } else if (showScroll && window.pageYOffset <= 400){
+            setShowScroll(false);    
+        }  
+    };
+    const scrollTop = () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    };
+    window.addEventListener("scroll", checkScrollTop);
+    
+    return (
+        <button className="scrollBtn fixed z-100 flex justify-center cursor-pointer rounded-full bg-gray-400 text-gray-800 right-0 bottom-0 p-8 m-12 opacity-75" onClick={scrollTop} style={{height: 40, width: 40, display: showScroll ? "flex" : "none"}}>
+            <TiArrowUp className="fixed z-100 self-center pr-1" size="4rem"/>
+        </button>
+    );
 }

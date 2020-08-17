@@ -1,0 +1,26 @@
+.scrollBtn {
+    width: 40;
+    height: 40;
+    animation: fadeIn 0.5s;
+    transition: opacity 0.4s;
+    transition: box-shadow 0.3s;
+}
+
+.scrollBtn:focus {
+    outline: none !important;
+    outline-offset: none !important;
+}
+
+.scrollBtn:hover {
+    box-shadow: 0 0 11px #cbd5e0;
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.75;
+    }
+  }

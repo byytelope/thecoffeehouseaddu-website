@@ -1,0 +1,11 @@
+.navBtn {
+    transition: all 0.3s;
+}
+
+.navBtn:hover {
+    background-color: #cbd5e0;
+}
+
+.navBtn: {
+    background-color: #cbd5e0;
+}
