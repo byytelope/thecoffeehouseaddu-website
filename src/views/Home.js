@@ -21,7 +21,7 @@ export default function Home() {
             <animated.div style={FadeIn}>
                 <Header/>
                 <div className="flex justify-center py-8">
-                    <ul className="flex justify-center text-xl text-gray-700 max-w-sm rounded-md overflow-hidden border-2 border-gray-400 bg-gray-300 divide-x divide-gray-400">
+                    <ul className="flex justify-center text-xl text-gray-700 max-w-sm rounded-md overflow-hidden bg-gray-300 divide-x divide-gray-400">
                         <li className="navBtn font-bold p-4 cursor-pointer hover:text-gray-800 flex-shrink-0" onClick={() => window.scrollTo({behavior: "smooth", top: menuRef.current.offsetTop})}>
                             <text>MENU</text>
                         </li>
