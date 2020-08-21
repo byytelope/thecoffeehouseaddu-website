@@ -17,8 +17,8 @@ export default function ScrollToTop() {
     window.addEventListener("scroll", checkScrollTop);
     
     return (
-        <button className="scrollBtn fixed z-100 flex justify-center cursor-pointer rounded-full bg-gray-400 text-gray-800 right-0 bottom-0 p-8 m-12 opacity-75" onClick={scrollTop} style={{height: 40, width: 40, display: showScroll ? "flex" : "none"}}>
-            <TiArrowUp className="fixed z-100 self-center pr-1" size="4rem"/>
+        <button className="scrollBtn fixed z-100 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt hover:bg-white right-0 bottom-0 p-8 m-12 opacity-75" onClick={scrollTop} style={{height: 40, width: 40, display: showScroll ? "flex" : "none"}}>
+            <TiArrowUp className="fixed z-100 self-center pr-1 text-tch-gray-dk" size="4rem"/>
         </button>
     );
 }
