@@ -11,7 +11,7 @@ export default function Menu() {
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
                 </p>
             </div>
-            <div className="flex justify-center items-center flex-col xl:flex-row p-6 space-x-0 xl:space-x-32 space-y-8 md:space-y-12 xl:space-y-0">
+            <div className="flex justify-center items-center flex-col xl:flex-row p-6 space-x-0 xl:space-x-24 space-y-8 md:space-y-12 xl:space-y-0">
                 <MenuCard 
                     image={Image} 
                     drinkName="Ehbandi Brew"
