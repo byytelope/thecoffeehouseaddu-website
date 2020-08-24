@@ -1,8 +1,7 @@
 .scrollBtn {
     width: 40;
     height: 40;
-    animation: fadeIn 0.5s;
-    transition: opacity 0.4s;
+    transition: opacity 0.3s;
     transition: box-shadow 0.3s;
 }
 
@@ -15,12 +14,3 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     opacity: 1;
 }
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0.75;
-    }
-  }

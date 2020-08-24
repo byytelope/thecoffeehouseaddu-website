@@ -21,7 +21,11 @@ export default function HeaderText() {
                     {textTrail.map(({ x, height, ...rest }, index) => (
                         <animated.div
                             key={textItems[index]}
-                            style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }}>
+                            style={{
+                                ...rest,
+                                transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
+                            }}
+                        >
                             <animated.div style={{ height }}>{textItems[index]}</animated.div>
                         </animated.div>
                     ))}

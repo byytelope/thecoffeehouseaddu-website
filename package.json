@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-app",
+  "name": "the-coffee-house-maldives",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.20.5"
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.5",
+    "prettier": "^2.0.5"
   }
 }
