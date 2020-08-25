@@ -26,6 +26,16 @@ module.exports = {
                 "-88": "-22rem",
                 "-96": "-24rem"
             },
+            padding: {
+                "72": "18rem",
+                "80": "20rem",
+                "88": "22rem",
+                "96": "24rem",
+                "-72": "-18rem",
+                "-80": "-20rem",
+                "-88": "-22rem",
+                "-96": "-24rem"
+            }
         },
         fontFamily: {
             // "sans": ["SoleilW01-Bold"],
