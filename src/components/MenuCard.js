@@ -11,9 +11,10 @@ export default function MenuCard(props) {
             whileHover={{ scale: 1.05 }}
         >
             <img
-                className="w-full"
+                className="w-full rounded-lg"
                 src={props.cardImage}
                 alt="Drink"
+                draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
             />
             <div className="text-center px-6 py-4">

@@ -2,11 +2,15 @@ module.exports = {
     purge: [],
     theme: {
         extend: {
+            screens: {
+                dark: { raw: "(prefers-color-scheme: dark)" },
+            },
             colors: {
                 "tch-gray-lt0": "#fafafa",
                 "tch-gray-lt": "#f2f2f2",
                 "tch-gray-md": "#e0e0e0",
                 "tch-gray-dk": "#3f3f3f",
+                "tch-dark-surface": "#121212",
                 white: "#ffffff",
             },
             fontSize: {
@@ -24,7 +28,7 @@ module.exports = {
                 "-72": "-18rem",
                 "-80": "-20rem",
                 "-88": "-22rem",
-                "-96": "-24rem"
+                "-96": "-24rem",
             },
             padding: {
                 "72": "18rem",
@@ -34,8 +38,8 @@ module.exports = {
                 "-72": "-18rem",
                 "-80": "-20rem",
                 "-88": "-22rem",
-                "-96": "-24rem"
-            }
+                "-96": "-24rem",
+            },
         },
         fontFamily: {
             // "sans": ["SoleilW01-Bold"],

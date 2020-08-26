@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
 import About from "./About";
@@ -9,42 +9,87 @@ import Testimonies from "./Testimonials";
 import Footer from "./Footer";
 import "../assets/css/NavBtn.css";
 
-// import Background from "../assets/img/Background.jpg";
-
 export default function Home() {
     const menuRef = useRef();
     const specialtyRef = useRef();
     const aboutRef = useRef();
     const footerRef = useRef();
-    // style={{backgroundImage:` url(${Background})`}}
-    //  flex-col md:flex-row lg:flex-row xl:flex-row space-x-0 md:space-x-12 lg:space-x-12 xl:space-x-18 space-y-8 md:space-y-0 lg:space-y-0 xl:space-y-0
+    const useAnim = useAnimation();
+
+    const cardAnimStart = () => {
+        useAnim.start("cardPosFinal");
+    };
+    const cardAnimList = {
+        cardPosInit: {
+            transition: {
+                delayChildren: 0,
+                staggerChildren: 0.3,
+            },
+        },
+        cardPosFinal: {
+            zIndex: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.1,
+            },
+        },
+    };
+    const cardAnimItem = {
+        cardPosInit: { opacity: 0, y: 25 },
+        cardPosFinal: { opacity: 1, y: 0 },
+    };
+    const fadeInList = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 0.7,
+            },
+        },
+    };
+
     return (
         <div>
-            <Header />
+            <div>{cardAnimStart()}</div>
+            <motion.div initial="cardPosInit" animate={useAnim} variants={cardAnimList}>
+                <motion.div variants={cardAnimItem}>
+                    <Header />
+                </motion.div>
+            </motion.div>
             <div className="flex justify-center px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-8">
+                <animStart />
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-8"
+                    initial="cardPosInit"
+                    animate={useAnim}
+                    variants={cardAnimList}
+                >
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({ behavior: "smooth", top: aboutRef.current.offsetTop })
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        variants={cardAnimItem}
                     >
                         <p>OUR STORY</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({ behavior: "smooth", top: menuRef.current.offsetTop })
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        variants={cardAnimItem}
                     >
                         <p>PRODUCTS</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({
                                 behavior: "smooth",
@@ -53,11 +98,12 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        variants={cardAnimItem}
                     >
                         <p>SPECIALTY</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({
                                 behavior: "smooth",
@@ -66,14 +112,15 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        variants={cardAnimItem}
                     >
                         <p>CONTACT US</p>
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
-            <div ref={menuRef}>
-                <Menu />
-            </div>
+            <motion.div ref={menuRef} initial="hidden" animate="visible" variants={fadeInList}>
+                <Menu useAnim={useAnim} />
+            </motion.div>
             <div ref={specialtyRef}>
                 <Specialty />
             </div>
