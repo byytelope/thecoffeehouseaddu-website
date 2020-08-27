@@ -6,6 +6,7 @@ import IMG_Coldbrew_Tonic from "../assets/img/products/Cold-brew_Tonic.jpg";
 import IMG_Filter_Coffee from "../assets/img/products/Filter_Coffee.jpg";
 import IMG_Toasted_Coconut from "../assets/img/products/Toasted_Coconut.jpg";
 import IMG_Vietnamese_Brew from "../assets/img/products/Vietnamese_Brew.jpg";
+import IMG_Sparkling_Berries from "../assets/img/products/Sparkling_Berries.jpg";
 
 const coldBrewDesc =
     "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, chocolate and stronger notes of dried plum in fusion with sparkling tonic water to quench your thirst in the tropical weather of Maldives.";
@@ -14,6 +15,8 @@ const filterCoffeeDesc =
 const toastedCocoDesc =
     "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.";
 const vietBrewDesc =
+    "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
+const sparkleBerryDesc =
     "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
 
 const cardAnimList = {
@@ -71,9 +74,9 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={IMG_Toasted_Coconut}
-                            cardName="Toasted Coconut"
-                            cardDesc={toastedCocoDesc}
+                            cardImage={IMG_Sparkling_Berries}
+                            cardName="Sparkling Berries"
+                            cardDesc={sparkleBerryDesc}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -83,6 +86,13 @@ export default function Menu(props) {
                             cardDesc={vietBrewDesc}
                         />
                     </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={IMG_Toasted_Coconut}
+                            cardName="Toasted Coconut"
+                            cardDesc={toastedCocoDesc}
+                        />
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
@@ -90,5 +100,5 @@ export default function Menu(props) {
 }
 
 Menu.propTypes = {
-    useAnim: PropTypes.string,
+    useAnim: PropTypes.object,
 };

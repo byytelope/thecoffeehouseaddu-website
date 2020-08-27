@@ -59,7 +59,6 @@ export default function Home() {
                 </motion.div>
             </motion.div>
             <div className="flex justify-center px-8">
-                <animStart />
                 <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-8"
                     initial="cardPosInit"
@@ -130,7 +129,7 @@ export default function Home() {
             <div>
                 <Testimonies />
             </div>
-            <div ref={footerRef}>
+            <div ref={footerRef} className="pt-8">
                 <Footer />
             </div>
             <ScrollToTop />

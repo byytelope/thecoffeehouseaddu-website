@@ -35,7 +35,7 @@ export default function ScrollToTop() {
         <motion.div
             className={`${
                 showBtn ? "" : "pointer-events-none"
-            } scrollBtn fixed z-100 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt hover:bg-white right-0 bottom-0 p-8 m-12 opacity-75`}
+            } scrollBtn fixed z-50 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt hover:bg-white right-0 bottom-0 p-8 mb-20 m-12 opacity-75`}
             animate={{ opacity: showBtn ? 0.75 : 0 }}
             initial={{ opacity: 0 }}
             transition={{ opacity: { duration: 0.4 } }}
@@ -44,7 +44,7 @@ export default function ScrollToTop() {
             onClick={scrollTop}
         >
             <TiArrowUp
-                className="fixed z-100 self-center pr-1 text-tch-gray-dk opacity-50 hover:opacity-100"
+                className="fixed z-50 self-center pr-1 text-tch-gray-dk opacity-50 hover:opacity-100"
                 size="4rem"
             />
         </motion.div>

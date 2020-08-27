@@ -5,7 +5,7 @@ import Image from "../assets/img/card-top.jpg";
 export default function Testimonies() {
     return (
         <div>
-            <div className="text-center font-semibold text-tch-gray-dk text-3xl xl:text-2xl pt-24 pb-20 xl:p-24">
+            <div className="text-center font-semibold text-tch-gray-dk text-3xl xl:text-2xl pt-24 pb-20 px-12 xl:p-24">
                 <p>WHAT PEOPLE HAD TO SAY ABOUT OUR COFFEE</p>
             </div>
             <div className="flex justify-center p-6 px-8 sm:px-24 md:px-24 lg:px-24 xl:px-12 xl:overflow-x-auto">
