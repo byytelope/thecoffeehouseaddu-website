@@ -2,9 +2,6 @@ module.exports = {
     purge: [],
     theme: {
         extend: {
-            screens: {
-                dark: { raw: "(prefers-color-scheme: dark)" },
-            },
             colors: {
                 "tch-gray-lt0": "#fafafa",
                 "tch-gray-lt": "#f2f2f2",

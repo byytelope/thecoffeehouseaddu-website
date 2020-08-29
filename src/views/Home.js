@@ -66,7 +66,7 @@ export default function Home() {
                     variants={cardAnimList}
                 >
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({ behavior: "smooth", top: aboutRef.current.offsetTop })
                         }
@@ -77,7 +77,7 @@ export default function Home() {
                         <p>OUR STORY</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({ behavior: "smooth", top: menuRef.current.offsetTop })
                         }
@@ -88,7 +88,7 @@ export default function Home() {
                         <p>PRODUCTS</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({
                                 behavior: "smooth",
@@ -102,7 +102,7 @@ export default function Home() {
                         <p>SPECIALTY</p>
                     </motion.div>
                     <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk dark:text-white text-xl font-header cursor-pointer py-4 px-6"
+                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer py-4 px-6"
                         onClick={() =>
                             window.scrollTo({
                                 behavior: "smooth",
