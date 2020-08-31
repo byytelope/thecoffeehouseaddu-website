@@ -17,7 +17,13 @@ export default function Header() {
                     })
                 }
             >
-                <img className="photo" src={Logo} alt="Logo" />
+                <img
+                    className="photo"
+                    src={Logo}
+                    alt="Logo"
+                    draggable="false"
+                    onContextMenu={(e) => e.preventDefault()}
+                />
             </div>
         </div>
     );

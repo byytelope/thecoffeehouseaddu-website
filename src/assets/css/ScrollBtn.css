@@ -1,8 +1,9 @@
 .scrollBtn {
-    width: 40;
-    height: 40;
+    width: 4;
+    height: 4;
     transition: opacity 0.3s;
     transition: box-shadow 0.3s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .scrollBtn:focus {
