@@ -7,7 +7,7 @@ export default function MenuCard(props) {
 
     return (
         <motion.div
-            className="xl:max-w-sm max-w-screen-sm rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
+            className="xl:max-w-sm max-w-screen-sm rounded-lg shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
         >
             <img
@@ -22,7 +22,7 @@ export default function MenuCard(props) {
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left ${
+                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto ${
                         descLength ? "py-4" : ""
                     }`}
                 >
