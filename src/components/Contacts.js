@@ -106,7 +106,7 @@ export function Contacts() {
         <div className="grid gap-4 grid-cols-2 select-none highlight-none">
             <motion.div
                 className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
                 <a href="tel:+960-7897068">
@@ -122,7 +122,7 @@ export function Contacts() {
             </motion.div>
             <motion.div
                 className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
                 <a href="mailto:hello@thecoffeehouseaddu.com">

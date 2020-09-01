@@ -116,18 +116,24 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
             </div>
-            <motion.div ref={menuRef} initial="hidden" animate="visible" variants={fadeInList}>
-                <Menu useAnim={useAnim} />
+            <motion.div initial="hidden" animate="visible" variants={fadeInList}>
+                <div ref={menuRef}>
+                    <Menu
+                        useAnim={useAnim}
+                        cardAnimList={cardAnimList}
+                        cardAnimItem={cardAnimItem}
+                    />
+                </div>
+                <div ref={specialtyRef}>
+                    <Specialty />
+                </div>
+                <div ref={aboutRef}>
+                    <About />
+                </div>
+                <div ref={footerRef} className="pt-8">
+                    <Footer />
+                </div>
             </motion.div>
-            <div ref={specialtyRef}>
-                <Specialty />
-            </div>
-            <div ref={aboutRef}>
-                <About />
-            </div>
-            <div ref={footerRef} className="pt-8">
-                <Footer />
-            </div>
             <ScrollToTop />
         </div>
     );

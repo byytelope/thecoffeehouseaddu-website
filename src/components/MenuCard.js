@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 export default function MenuCard(props) {
-    const descLength = props.cardDesc.length > 0;
+    // const descLength = props.cardDesc.length > 0;
 
     return (
         <motion.div
@@ -22,9 +22,9 @@ export default function MenuCard(props) {
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto ${
-                        descLength ? "py-4" : ""
-                    }`}
+                    className={
+                        "text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto py-4"
+                    }
                 >
                     {props.cardDesc}
                 </p>
