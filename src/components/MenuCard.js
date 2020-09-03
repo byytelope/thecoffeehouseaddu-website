@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
 export default function MenuCard(props) {
-    // const descLength = props.cardDesc.length > 0;
+    const descLength = props.cardDesc.length > 0;
+    const priceLength = props.cardPrice !== 1024;
 
     return (
         <motion.div
@@ -22,12 +23,17 @@ export default function MenuCard(props) {
                     {props.cardName}
                 </div>
                 <p
-                    className={
-                        "text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto py-4"
-                    }
+                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto pt-4 ${
+                        descLength ? "" : "hidden"
+                    }`}
                 >
                     {props.cardDesc}
                 </p>
+            </div>
+            <div className={`px-6 pt-4 pb-6 ${priceLength ? "" : "hidden"}`}>
+                <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
+                    <p className="self-center">{`MVR ${props.cardPrice}`}</p>
+                </div>
             </div>
         </motion.div>
     );
@@ -37,4 +43,5 @@ MenuCard.propTypes = {
     cardImage: PropTypes.string,
     cardName: PropTypes.string,
     cardDesc: PropTypes.string,
+    cardPrice: PropTypes.number,
 };

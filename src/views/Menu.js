@@ -1,30 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import MenuCard from "../components/MenuCard";
+import ImgColdbrewTonic from "../assets/img/products/Cold-brew_Tonic.jpg";
+import ImgJapColdbrew from "../assets/img/products/Japanese_Cold_Brew.jpg";
+import ImgFilterCoffee from "../assets/img/products/Filter_Coffee.jpg";
+import ImgToastedCoconut from "../assets/img/products/Toasted_Coconut.jpg";
+import ImgVietnameseBrew from "../assets/img/products/Vietnamese_Brew.jpg";
+import ImgSparklingBerries from "../assets/img/products/Sparkling_Berries.jpg";
+
+const coldBrewTonicDesc =
+    "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, \
+    chocolate and stronger notes of dried plum in fusion with sparkling tonic water to quench your thirst in the tropical weather of Maldives.";
+const japColdBrewDesc =
+    "Japanese Cold brew is made with a method used by the Japanese to brew coffee and to instantly cool it down in the process, \
+    allowing us to extract flavorful notes from the beans in minutes rather than hours.";
+const filterCoffeeDesc =
+    "Sourced from countries like Brazil, Tanzania, Uganda and Ethiopia, our filter coffee is hand-brewed and filtered to get a coffee that is clear, \
+    light-bodied and flavorful while retaining all the notes of the coffee bean.";
+const toastedCocoDesc =
+    "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. \
+    The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.";
+const vietBrewDesc =
+    "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; \
+    this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
+const sparkleBerryDesc =
+    "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; \
+    this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
+
+const cardAnimList = {
+    cardPosInit: {
+        transition: {
+            delayChildren: 0,
+            staggerChildren: 0.3,
+        },
+    },
+    cardPosFinal: {
+        zIndex: 1,
+        transition: {
+            delayChildren: 1,
+            staggerChildren: 0.1,
+        },
+    },
+};
+const cardAnimItem = {
+    cardPosInit: { opacity: 0, y: 25 },
+    cardPosFinal: { opacity: 1, y: 0 },
+};
 
 export default function Menu(props) {
-    // eslint-disable-next-line
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch("http://127.0.0.1:5000/products");
-            setData(await response.json());
-            setLoading(false);
-        }
-        fetchData();
-    }, []);
-
-    const Cards = () => {
-        return data.map((content) => (
-            <motion.div key={content}>
-                <MenuCard cardImage={null} cardName={content.name} cardDesc={content.description} />
-            </motion.div>
-        ));
-    };
-
     return (
         <div>
             <div className="text-center font-semibold text-tch-gray-dk text-3xl xl:text-2xl pt-24 pb-20">
@@ -44,8 +68,56 @@ export default function Menu(props) {
                     className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 pb-8"
                     initial="cardPosInit"
                     animate={props.useAnim}
+                    variants={cardAnimList}
                 >
-                    <Cards />
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgColdbrewTonic}
+                            cardName="Cold-brew Tonic"
+                            cardDesc={coldBrewTonicDesc}
+                            cardPrice={40}
+                        />
+                    </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgFilterCoffee}
+                            cardName="Filter Coffee"
+                            cardDesc={filterCoffeeDesc}
+                            cardPrice={30}
+                        />
+                    </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgSparklingBerries}
+                            cardName="Sparkling Berries"
+                            cardDesc={sparkleBerryDesc}
+                            cardPrice={45}
+                        />
+                    </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgJapColdbrew}
+                            cardName="Japanese Cold-brew"
+                            cardDesc={japColdBrewDesc}
+                            cardPrice={35}
+                        />
+                    </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgVietnameseBrew}
+                            cardName="Vietnamese Brew"
+                            cardDesc={vietBrewDesc}
+                            cardPrice={35}
+                        />
+                    </motion.div>
+                    <motion.div variants={cardAnimItem}>
+                        <MenuCard
+                            cardImage={ImgToastedCoconut}
+                            cardName="Toasted Coconut"
+                            cardDesc={toastedCocoDesc}
+                            cardPrice={45}
+                        />
+                    </motion.div>
                 </motion.div>
             </div>
         </div>

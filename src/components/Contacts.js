@@ -19,6 +19,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a
                     href="https://facebook.com/The-Coffee-House-Addu-106094487875368"
@@ -34,6 +35,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a
                     href="https://instagram.com/thecoffeehouseaddu/"
@@ -49,6 +51,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a href="viber://chat?number=9607897068" target="_blank" rel="noopener noreferrer">
                     <div>
@@ -60,6 +63,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a
                     href="https://twitter.com/thecoffeehouseaddu"
@@ -75,6 +79,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
                     <div>
@@ -86,6 +91,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.10 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300 }}
             >
                 <a
                     href="https://telegram.me/thecoffeehouseaddu"
@@ -108,6 +114,7 @@ export function Contacts() {
                 className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 250 }}
             >
                 <a href="tel:+960-7897068">
                     <div className="flex flex-row">
@@ -124,6 +131,7 @@ export function Contacts() {
                 className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 250 }}
             >
                 <a href="mailto:hello@thecoffeehouseaddu.com">
                     <div className="flex flex-row">

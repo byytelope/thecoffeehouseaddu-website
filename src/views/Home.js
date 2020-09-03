@@ -71,6 +71,7 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 150 }}
                         variants={cardAnimItem}
                     >
                         <p>OUR STORY</p>
@@ -82,6 +83,7 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 150 }}
                         variants={cardAnimItem}
                     >
                         <p>PRODUCTS</p>
@@ -96,6 +98,7 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 150 }}
                         variants={cardAnimItem}
                     >
                         <p>SPECIALTY</p>
@@ -110,6 +113,7 @@ export default function Home() {
                         }
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 150 }}
                         variants={cardAnimItem}
                     >
                         <p>CONTACT US</p>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/Logo.css";
-import Logo from "../assets/img/Thumb_TCHM_transparent.png";
+import HeaderLogo from "../assets/img/HeaderLogo.png";
 
 export default function Header() {
     return (
@@ -8,7 +8,7 @@ export default function Header() {
             <div className="flex justify-center py-8">
                 <img
                     className="photo"
-                    src={Logo}
+                    src={HeaderLogo}
                     alt="Logo"
                     draggable="false"
                     onContextMenu={(e) => e.preventDefault()}
