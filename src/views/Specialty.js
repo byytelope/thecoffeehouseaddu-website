@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import MenuCard from "../components/MenuCard";
 import Map from "../components/World";
-import ImgKisinga from "../assets/img/specialty/Kisinga.png";
-import ImgBelaVista from "../assets/img/specialty/Bela_Vista.png";
-import ImgCapimBranco from "../assets/img/specialty/Capim_Branco.png";
+// import ImgKisinga from "../assets/img/specialty/Kisinga.png";
+// import ImgBelaVista from "../assets/img/specialty/Bela_Vista.png";
+// import ImgCapimBranco from "../assets/img/specialty/Capim_Branco.png";
 
 const kisingaDesc =
     "This naturally processed coffee has a real strawberry-forward character with delicate floral taste that rivals the best African produced coffee out there. \
@@ -18,6 +19,18 @@ const capimBrancoDesc =
 The volcanic environment in which the farm is in and the attentive husbandry produces uniform blossoming and maturation creating excellent conditions for processing the sweet, fruity coffee with slight hints of chocolate and orange notes.";
 
 export default function Menu() {
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        async function fetchImages() {
+            const response = await axios.get(
+                "https://google-photos-album-demo2.glitch.me/v3jsgKUCsjbpbMZW7"
+            );
+            setImages(await response.data);
+        }
+        fetchImages();
+    }, []);
+
     return (
         <div>
             <div className="text-center font-semibold text-tch-gray-dk text-3xl xl:text-2xl pt-24 pb-20 xl:p-24">
@@ -26,19 +39,19 @@ export default function Menu() {
             <div className="flex justify-center p-6 px-8 sm:px-24 md:px-24 lg:px-24 xl:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 pb-8">
                     <MenuCard
-                        cardImage={ImgKisinga}
+                        cardImage={images[9]}
                         cardName="Kisinga"
                         cardDesc={kisingaDesc}
                         cardPrice={1024}
                     />
                     <MenuCard
-                        cardImage={ImgBelaVista}
+                        cardImage={images[8]}
                         cardName="Bela Vista"
                         cardDesc={belaVistaDesc}
                         cardPrice={1024}
                     />
                     <MenuCard
-                        cardImage={ImgCapimBranco}
+                        cardImage={images[7]}
                         cardName="Capim Branco"
                         cardDesc={capimBrancoDesc}
                         cardPrice={1024}

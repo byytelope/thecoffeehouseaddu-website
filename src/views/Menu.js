@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import PropTypes from "prop-types";
 import MenuCard from "../components/MenuCard";
-import ImgColdbrewTonic from "../assets/img/products/Cold_Brew_Tonic.jpg";
-import ImgJapColdbrew from "../assets/img/products/Japanese_Cold_Brew.jpg";
-import ImgFilterCoffee from "../assets/img/products/Filter_Coffee.jpg";
-import ImgKaishiMetaa from "../assets/img/products/Kaishi_Metaa.jpg";
-import ImgVietnameseBrew from "../assets/img/products/Vietnamese_Brew.jpg";
-import ImgSparklingCoffee from "../assets/img/products/Sparkling_Coffee.jpg";
+// import ImgColdbrewTonic from "../assets/img/products/Cold_Brew_Tonic.jpg";
+// import ImgJapColdbrew from "../assets/img/products/Japanese_Cold_Brew.jpg";
+// import ImgFilterCoffee from "../assets/img/products/Filter_Coffee.jpg";
+// import ImgKaishiMetaa from "../assets/img/products/Kaishi_Metaa.jpg";
+// import ImgVietnameseBrew from "../assets/img/products/Vietnamese_Brew.jpg";
+// import ImgSparklingCoffee from "../assets/img/products/Sparkling_Coffee.jpg";
 
 const coldBrewTonicDesc =
     "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, \
@@ -49,6 +50,18 @@ const cardAnimItem = {
 };
 
 export default function Menu(props) {
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        async function fetchImages() {
+            const response = await axios.get(
+                "https://google-photos-album-demo2.glitch.me/v3jsgKUCsjbpbMZW7"
+            );
+            setImages(await response.data); // 1:Filter 2:Coldbrewtonic 3:Viet 4:Coco 5:berry 6:Jap
+        }
+        fetchImages();
+    }, []);
+
     return (
         <div>
             <div className="text-center font-semibold text-tch-gray-dk text-3xl xl:text-2xl pt-24 pb-20">
@@ -72,7 +85,7 @@ export default function Menu(props) {
                 >
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgColdbrewTonic}
+                            cardImage={images[2]}
                             cardName="Cold-brew Tonic"
                             cardDesc={coldBrewTonicDesc}
                             cardPrice={40}
@@ -80,7 +93,7 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgFilterCoffee}
+                            cardImage={images[1]}
                             cardName="Filter Coffee"
                             cardDesc={filterCoffeeDesc}
                             cardPrice={30}
@@ -88,7 +101,7 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgSparklingCoffee}
+                            cardImage={images[5]}
                             cardName="Sparkling Coffee"
                             cardDesc={sparklingCoffeeDesc}
                             cardPrice={45}
@@ -96,7 +109,7 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgJapColdbrew}
+                            cardImage={images[6]}
                             cardName="Japanese Cold-brew"
                             cardDesc={japColdBrewDesc}
                             cardPrice={35}
@@ -104,7 +117,7 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgVietnameseBrew}
+                            cardImage={images[3]}
                             cardName="Vietnamese Brew"
                             cardDesc={vietBrewDesc}
                             cardPrice={35}
@@ -112,7 +125,7 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgKaishiMetaa}
+                            cardImage={images[4]}
                             cardName="Kaishi Metaa"
                             cardDesc={kaishiMetaaDesc}
                             cardPrice={45}
