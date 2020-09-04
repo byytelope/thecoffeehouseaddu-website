@@ -9,7 +9,8 @@ export default function MenuCard(props) {
     return (
         <motion.div
             className="xl:max-w-sm max-w-screen-sm rounded-lg shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.025 }}
+            transition={{ type: "spring", stiffness: 400, damping: 50 }}
         >
             <img
                 className="w-full rounded-lg"

@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import MenuCard from "../components/MenuCard";
-import ImgColdbrewTonic from "../assets/img/products/Cold-brew_Tonic.jpg";
+import ImgColdbrewTonic from "../assets/img/products/Cold_Brew_Tonic.jpg";
 import ImgJapColdbrew from "../assets/img/products/Japanese_Cold_Brew.jpg";
 import ImgFilterCoffee from "../assets/img/products/Filter_Coffee.jpg";
-import ImgToastedCoconut from "../assets/img/products/Toasted_Coconut.jpg";
+import ImgKaishiMetaa from "../assets/img/products/Kaishi_Metaa.jpg";
 import ImgVietnameseBrew from "../assets/img/products/Vietnamese_Brew.jpg";
-import ImgSparklingBerries from "../assets/img/products/Sparkling_Berries.jpg";
+import ImgSparklingCoffee from "../assets/img/products/Sparkling_Coffee.jpg";
 
 const coldBrewTonicDesc =
     "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, \
@@ -18,15 +18,15 @@ const japColdBrewDesc =
 const filterCoffeeDesc =
     "Sourced from countries like Brazil, Tanzania, Uganda and Ethiopia, our filter coffee is hand-brewed and filtered to get a coffee that is clear, \
     light-bodied and flavorful while retaining all the notes of the coffee bean.";
-const toastedCocoDesc =
+const kaishiMetaaDesc =
     "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. \
     The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.";
 const vietBrewDesc =
     "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; \
     this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
-const sparkleBerryDesc =
-    "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; \
-    this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.";
+const sparklingCoffeeDesc =
+    "Whoever said a blend of coffee and a fizzy drink can't go well, hasn't tried our Sparkling Berries yet; \
+    which consists of a flavourful cold brew with a mixed-berry syrup concoction, packing a punch of fizziness.";
 
 const cardAnimList = {
     cardPosInit: {
@@ -88,9 +88,9 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgSparklingBerries}
-                            cardName="Sparkling Berries"
-                            cardDesc={sparkleBerryDesc}
+                            cardImage={ImgSparklingCoffee}
+                            cardName="Sparkling Coffee"
+                            cardDesc={sparklingCoffeeDesc}
                             cardPrice={45}
                         />
                     </motion.div>
@@ -112,9 +112,9 @@ export default function Menu(props) {
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
                         <MenuCard
-                            cardImage={ImgToastedCoconut}
-                            cardName="Toasted Coconut"
-                            cardDesc={toastedCocoDesc}
+                            cardImage={ImgKaishiMetaa}
+                            cardName="Kaishi Metaa"
+                            cardDesc={kaishiMetaaDesc}
                             cardPrice={45}
                         />
                     </motion.div>

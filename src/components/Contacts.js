@@ -17,7 +17,7 @@ export function Socials() {
         <div className="grid gap-16 grid-cols-3 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6">
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -33,7 +33,7 @@ export function Socials() {
             </motion.div>
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -49,7 +49,7 @@ export function Socials() {
             </motion.div>
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -61,7 +61,7 @@ export function Socials() {
             </motion.div>
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -77,7 +77,7 @@ export function Socials() {
             </motion.div>
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -89,7 +89,7 @@ export function Socials() {
             </motion.div>
             <motion.div
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.10 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
@@ -110,40 +110,40 @@ export function Socials() {
 export function Contacts() {
     return (
         <div className="grid gap-4 grid-cols-2 select-none highlight-none">
-            <motion.div
-                className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 250 }}
-            >
-                <a href="tel:+960-7897068">
+            <a href="tel:+960-7897068">
+                <motion.div
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 250 }}
+                >
                     <div className="flex flex-row">
                         <FontAwesomeIcon
                             icon={faPhoneAlt}
                             color="#3f3f3f"
-                            className="self-center mr-3 ml-1"
+                            className="self-center mr-3"
                         />
                         <p>CALL US</p>
                     </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 250 }}
-            >
-                <a href="mailto:hello@thecoffeehouseaddu.com">
+                </motion.div>
+            </a>
+            <a href="mailto:hello@thecoffeehouseaddu.com" target="_blank" rel="noopener noreferrer">
+                <motion.div
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 250 }}
+                >
                     <div className="flex flex-row">
                         <FontAwesomeIcon
                             icon={faAt}
                             color="#3f3f3f"
-                            className="self-center mr-3 ml-1"
+                            className="self-center mr-3"
                         />
                         <p>EMAIL US</p>
                     </div>
-                </a>
-            </motion.div>
+                </motion.div>
+            </a>
         </div>
     );
 }

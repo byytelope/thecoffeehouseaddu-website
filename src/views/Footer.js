@@ -16,21 +16,22 @@ export default function Footer() {
             <div className="font-extrabold text-xl text-center text-tch-gray-dk self-center">
                 THE COFFEE HOUSE ADDU
             </div>
-            <motion.div
-                className="font-medium text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out select-none highlight-none px-4 py-1"
-                whileHover={{ scale: 1.025 }}
-                whileTap={{ scale: 0.975 }}
-                transition={{ type: "spring", stiffness: 250 }}
+            <a
+                href="https://www.google.com/maps/dir/?api=1&amp;origin=&amp;destination=-0.599006,73.082549&amp;travelmode=driving"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-center"
             >
-                <a
-                    href="https://www.google.com/maps/dir/?api=1&amp;origin=&amp;destination=-0.599006,73.082549&amp;travelmode=driving"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <motion.div
+                    className="w-64 font-medium text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out select-none highlight-none px-4 py-1"
+                    whileHover={{ scale: 1.025 }}
+                    whileTap={{ scale: 0.975 }}
+                    transition={{ type: "spring", stiffness: 250 }}
                 >
                     <FontAwesomeIcon icon={faMapPin} />
                     &nbsp;&nbsp;RADHEBAIGE, HITHADHOO <br />
-                </a>
-            </motion.div>
+                </motion.div>
+            </a>
             <div className="font-regular text-center text-tch-gray-dk self-center pt-4">
                 EST.&nbsp;2020
             </div>

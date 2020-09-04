@@ -122,11 +122,7 @@ export default function Home() {
             </div>
             <motion.div initial="hidden" animate="visible" variants={fadeInList}>
                 <div ref={menuRef}>
-                    <Menu
-                        useAnim={useAnim}
-                        cardAnimList={cardAnimList}
-                        cardAnimItem={cardAnimItem}
-                    />
+                    <Menu useAnim={useAnim} />
                 </div>
                 <div ref={specialtyRef}>
                     <Specialty />
