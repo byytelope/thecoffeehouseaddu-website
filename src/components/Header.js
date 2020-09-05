@@ -1,20 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "../assets/css/Logo.css";
-// import HeaderLogo from "../assets/img/HeaderLogo.png";
+import headerLogo from "../assets/img/HeaderLogo.png";
 
 export default function Header() {
-    const [headerLogo, setHeaderLogo] = useState([]);
-
-    useEffect(() => {
-        async function fetchImages() {
-            const response = await axios.get(
-                "https://google-photos-album-demo2.glitch.me/v3jsgKUCsjbpbMZW7"
-            );
-            setHeaderLogo(response.data[0]);
-        }
-        fetchImages();
-    }, []);
 
     return (
         <div className="w-full py-8">
@@ -24,6 +12,8 @@ export default function Header() {
                     src={headerLogo}
                     alt="Logo"
                     draggable="false"
+                    width={1340}
+                    height={1340}
                     onContextMenu={(e) => e.preventDefault()}
                 />
             </div>

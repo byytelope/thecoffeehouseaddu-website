@@ -1,5 +1,6 @@
+import React, { useRef, useState, useEffect } from "react";
+import axios from "axios";
 import { motion, useAnimation } from "framer-motion";
-import React, { useRef } from "react";
 import "../assets/css/HighlightNone.css";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
@@ -28,7 +29,7 @@ export default function Home() {
         cardPosFinal: {
             zIndex: 1,
             transition: {
-                delayChildren: 0.3,
+                delayChildren: 1.0,
                 staggerChildren: 0.1,
             },
         },
@@ -44,10 +45,22 @@ export default function Home() {
         visible: {
             opacity: 1,
             transition: {
-                delay: 0.7,
+                delay: 2,
             },
         },
     };
+
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        async function fetchImages() {
+            const response = await axios.get(
+                "https://google-photos-album-demo2.glitch.me/v3jsgKUCsjbpbMZW7"
+            );
+            setImages(response.data);
+        }
+        fetchImages();
+    }, []);
 
     return (
         <div>
@@ -122,10 +135,10 @@ export default function Home() {
             </div>
             <motion.div initial="hidden" animate="visible" variants={fadeInList}>
                 <div ref={menuRef}>
-                    <Menu useAnim={useAnim} />
+                    <Menu useAnim={useAnim} images={images} />
                 </div>
                 <div ref={specialtyRef}>
-                    <Specialty />
+                    <Specialty images={images} />
                 </div>
                 <div ref={aboutRef}>
                     <About />
