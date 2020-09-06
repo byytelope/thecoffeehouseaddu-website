@@ -39,7 +39,6 @@ module.exports = {
             },
         },
         fontFamily: {
-            // "sans": ["SoleilW01-Bold"],
             header: ["javata-regular"],
             body: ["Montserrat"],
         },
