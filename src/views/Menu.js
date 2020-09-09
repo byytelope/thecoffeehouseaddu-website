@@ -86,6 +86,8 @@ export default function Menu(props) {
                             cardName="Cold-brew Tonic"
                             cardDesc={coldBrewTonicDesc}
                             cardPrice={40}
+                            cardIsHot={false}
+                            cardIsCold={true}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -94,6 +96,8 @@ export default function Menu(props) {
                             cardName="Filter Coffee"
                             cardDesc={filterCoffeeDesc}
                             cardPrice={30}
+                            cardIsHot={false}
+                            cardIsCold={true}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -102,6 +106,8 @@ export default function Menu(props) {
                             cardName="Sparkling Coffee"
                             cardDesc={sparklingCoffeeDesc}
                             cardPrice={45}
+                            cardIsHot={false}
+                            cardIsCold={true}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -110,6 +116,8 @@ export default function Menu(props) {
                             cardName="Japanese Cold-brew"
                             cardDesc={japColdBrewDesc}
                             cardPrice={35}
+                            cardIsHot={false}
+                            cardIsCold={true}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -118,6 +126,8 @@ export default function Menu(props) {
                             cardName="Vietnamese Brew"
                             cardDesc={vietBrewDesc}
                             cardPrice={35}
+                            cardIsHot={true}
+                            cardIsCold={true}
                         />
                     </motion.div>
                     <motion.div variants={cardAnimItem}>
@@ -126,6 +136,8 @@ export default function Menu(props) {
                             cardName="Kaishi Metaa"
                             cardDesc={kaishiMetaaDesc}
                             cardPrice={45}
+                            cardIsHot={false}
+                            cardIsCold={true}
                         />
                     </motion.div>
                 </motion.div>

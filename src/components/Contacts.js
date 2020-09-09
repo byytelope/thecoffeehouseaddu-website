@@ -81,9 +81,13 @@ export function Socials() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
-                <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://telegram.me/thecoffeehouseaddu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <div>
-                        <FontAwesomeIcon icon={faWhatsapp} color="#25D366" size="2x" />
+                        <FontAwesomeIcon icon={faTelegramPlane} color="#0088CC" size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -93,13 +97,9 @@ export function Socials() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
-                <a
-                    href="https://telegram.me/thecoffeehouseaddu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
                     <div>
-                        <FontAwesomeIcon icon={faTelegramPlane} color="#0088CC" size="2x" />
+                        <FontAwesomeIcon icon={faWhatsapp} color="#25D366" size="2x" />
                     </div>
                 </a>
             </motion.div>
