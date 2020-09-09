@@ -1,55 +1,55 @@
 {
-  "name": "the-coffee-house-addu",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-brands-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "autoprefixer": "^9.8.6",
-    "axios": "^0.20.0",
-    "framer-motion": "^2.4.3-beta.2",
-    "postcss-cli": "^7.1.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-bottom-scroll-listener": "^4.1.0",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0",
-    "react-loading-skeleton": "^2.1.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.2",
-    "tailwindcss": "^1.6.2"
-  },
-  "scripts": {
-    "build:css": "postcss src/index.css -o src/App.css",
-    "watch:css": "postcss src/index.css -o src/App.css -w",
-    "start": "yarn build:css && react-scripts start",
-    "build": "yarn build:css && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-react": "^7.20.5",
-    "prettier": "^2.0.5"
-  }
+    "name": "the-coffee-house-addu",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.30",
+        "@fortawesome/free-brands-svg-icons": "^5.14.0",
+        "@fortawesome/free-solid-svg-icons": "^5.14.0",
+        "@fortawesome/react-fontawesome": "^0.1.11",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "autoprefixer": "^9.8.6",
+        "axios": "^0.20.0",
+        "framer-motion": "^2.4.3-beta.2",
+        "postcss-cli": "^7.1.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-bottom-scroll-listener": "^4.1.0",
+        "react-dom": "^16.13.1",
+        "react-icons": "^3.10.0",
+        "react-loading-skeleton": "^2.1.1",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.2",
+        "tailwindcss": "^1.6.2"
+    },
+    "scripts": {
+        "build:css": "postcss src/index.css -o src/App.css",
+        "watch:css": "postcss src/index.css -o src/App.css -w",
+        "start": "yarn build:css && react-scripts start",
+        "build": "yarn build:css && react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-react": "^7.20.5",
+        "prettier": "^2.0.5"
+    }
 }

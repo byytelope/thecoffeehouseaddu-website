@@ -1,6 +1,9 @@
 module.exports = {
     purge: [],
     theme: {
+        future: {
+            purgeLayersByDefault: true,
+        },
         extend: {
             colors: {
                 "tch-gray-lt0": "#fafafa",

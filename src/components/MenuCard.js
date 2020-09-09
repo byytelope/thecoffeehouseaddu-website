@@ -37,7 +37,7 @@ export default function MenuCard(props) {
                 <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
                     <p className="self-center">{`MVR ${props.cardPrice}`}</p>
                 </div>
-                <div className="self-center space-x-3">
+                <div className="self-center space-x-3 pr-2">
                     <FontAwesomeIcon icon={faMugHot} color="#3f3f3f" className={`${props.cardIsHot? "" : "hidden"}`} />
                     <FontAwesomeIcon icon={faSnowflake} color="#3f3f3f" className={`${props.cardIsCold? "" : "hidden"}`} />
                 </div>
