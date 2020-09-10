@@ -8,7 +8,7 @@ export default function Menu() {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch("http://127.0.0.1:5000/products");
+            const response = await fetch("http://localhost:5000/products");
             setData(await response.json());
         }
         fetchData();
@@ -29,6 +29,8 @@ export default function Menu() {
                             cardName={content.name}
                             cardDesc={content.description}
                             cardPrice={content.price}
+                            cardIsCold={content.is_cold}
+                            cardIsHot={content.is_hot}
                         />
                     </motion.div>
                 ))}

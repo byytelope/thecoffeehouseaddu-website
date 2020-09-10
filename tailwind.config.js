@@ -3,6 +3,7 @@ module.exports = {
     theme: {
         future: {
             purgeLayersByDefault: true,
+            removeDeprecatedGapUtilities: true,
         },
         extend: {
             colors: {
@@ -17,24 +18,24 @@ module.exports = {
                 "5.5xl": "3.5rem",
             },
             scale: {
-                "15": ".15",
-                "25": ".25",
+                15: ".15",
+                25: ".25",
             },
             margin: {
-                "72": "18rem",
-                "80": "20rem",
-                "88": "22rem",
-                "96": "24rem",
+                72: "18rem",
+                80: "20rem",
+                88: "22rem",
+                96: "24rem",
                 "-72": "-18rem",
                 "-80": "-20rem",
                 "-88": "-22rem",
                 "-96": "-24rem",
             },
             padding: {
-                "72": "18rem",
-                "80": "20rem",
-                "88": "22rem",
-                "96": "24rem",
+                72: "18rem",
+                80: "20rem",
+                88: "22rem",
+                96: "24rem",
                 "-72": "-18rem",
                 "-80": "-20rem",
                 "-88": "-22rem",
