@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex justify-center py-8 pt-12">
                 <Contacts />
             </div>
-            <div className="font-extrabold text-xl text-center text-tch-gray-dk self-center">
+            <div className="font-extrabold text-xl text-center text-tch-gray-dk self-center pb-2">
                 THE COFFEE HOUSE ADDU
             </div>
             <a

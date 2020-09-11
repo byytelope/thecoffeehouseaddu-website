@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimateSharedLayout } from "framer-motion";
-import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 import MenuCard from "../components/MenuCard";
 
 export default function Menu() {
@@ -15,27 +14,23 @@ export default function Menu() {
     }, []);
 
     const Cards = () => {
-        return (
-            <AnimateSharedLayout>
-                {data.map((content) => (
-                    <motion.div
-                        key={content.id}
-                        animate={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 25 }}
-                        transition={{ type: "spring", delay: 1 + (content.id / 10), stiffness: 200 }}
-                    >
-                        <MenuCard
-                            cardImage={content.img}
-                            cardName={content.name}
-                            cardDesc={content.description}
-                            cardPrice={content.price}
-                            cardIsCold={content.is_cold}
-                            cardIsHot={content.is_hot}
-                        />
-                    </motion.div>
-                ))}
-            </AnimateSharedLayout>
-        );
+        return data.map((content) => (
+            <motion.div
+                key={content.id}
+                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 25 }}
+                transition={{ type: "spring", delay: 1.5 + content.id / 10, stiffness: 200 }}
+            >
+                <MenuCard
+                    cardImage={content.img}
+                    cardName={content.name}
+                    cardDesc={content.description}
+                    cardPrice={content.price}
+                    cardIsCold={content.is_cold}
+                    cardIsHot={content.is_hot}
+                />
+            </motion.div>
+        ));
     };
 
     return (
@@ -60,7 +55,3 @@ export default function Menu() {
         </div>
     );
 }
-
-Menu.propTypes = {
-    useAnim: PropTypes.object,
-};
