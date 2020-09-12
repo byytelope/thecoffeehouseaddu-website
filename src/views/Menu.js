@@ -30,7 +30,7 @@ export default function Menu(props) {
             img: props.images[5],
             name: "Sparkling Coffee",
             description:
-                "Whoever said a blend of coffee and a fizzy drink can't go well, hasn't tried our Sparkling Berries yet; which consists of a flavourful cold brew with a mixed-berry syrup concoction, packing a punch of fizziness.",
+                "Whoever said a blend of coffee and a fizzy drink can't go well, hasn't tried our Sparkling Coffee yet; which consists of a flavourful cold brew with a mixed-berry syrup concoction, packing a punch of fizziness.",
             price: 45,
             is_cold: true,
             is_hot: false,
@@ -38,9 +38,9 @@ export default function Menu(props) {
         {
             id: 4,
             img: props.images[6],
-            name: "Japanese Cold-brew",
+            name: "Japanese Iced-Coffee",
             description:
-                "Japanese Cold brew is made with a method used by the Japanese to brew coffee and to instantly cool it down in the process, allowing us to extract flavorful notes from the beans in minutes rather than hours.",
+                "Japanese Iced-Coffee is made with a method used by the Japanese to brew coffee and to instantly cool it down in the process, allowing us to extract flavorful notes from the beans in minutes rather than hours.",
             price: 35,
             is_cold: true,
             is_hot: false,
@@ -51,7 +51,7 @@ export default function Menu(props) {
             name: "Vietnamese Brew",
             description:
                 "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.",
-            price: 35,
+            price: 40,
             is_cold: true,
             is_hot: true,
         },

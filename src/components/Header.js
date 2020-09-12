@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../assets/css/Logo.css";
 import headerLogo from "../assets/img/HeaderLogo.png";
+import { LoyaltyContext } from "./LoyaltyContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../assets/css/ToastDefault.css";
 
-export function Header() {
+export default function Header() {
+    const { setRenderLoyalty } = useContext(LoyaltyContext);
+    const [showLoyalty, setShowLoyalty] = useState(0);
+    const [clickTimes, setClickTimes] = useState(5);
+    const notify = () =>
+        toast(`Click ${clickTimes} more times!`, {
+            toastId: 1,
+            className: "toast-container toast-container-after font-header",
+            hideProgressBar: true,
+        });
+
+    const handleOnClick = () => {
+        setShowLoyalty(showLoyalty + 1);
+        setClickTimes(clickTimes - 1);
+        if (showLoyalty === 0) {
+            notify();
+        } else if (showLoyalty < 5) {
+            toast.update(1, { render: `Click ${clickTimes} more times!` });
+        } else if (showLoyalty === 5) {
+            toast.dismiss(1);
+        }
+    };
+
+    useEffect(() => {
+        if (showLoyalty === 6) {
+            setRenderLoyalty(true);
+        }
+    }, [showLoyalty]);
+
     return (
         <motion.div
             className="flex justify-center w-full py-16"
@@ -11,6 +43,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5 }}
         >
+            <ToastContainer />
             <img
                 className="photo"
                 src={headerLogo}
@@ -19,35 +52,8 @@ export function Header() {
                 width={1340}
                 height={1340}
                 onContextMenu={(e) => e.preventDefault()}
+                onClick={() => handleOnClick()}
             />
         </motion.div>
     );
-}
-
-export function Buttons(props) {
-    return props.btnData.map((btnContent) => (
-        <motion.div
-            key={btnContent.id}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-                type: "spring",
-                stiffness: 250,
-                delay: 1 + btnContent.id / 10,
-            }}
-        >
-            <motion.div
-                key={btnContent.id}
-                className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out py-4 px-6"
-                onClick={() =>
-                    window.scrollTo({ behavior: "smooth", top: btnContent.ref.offsetTop })
-                }
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 250 }}
-            >
-                <p>{btnContent.text}</p>
-            </motion.div>
-        </motion.div>
-    ));
 }

@@ -1,0 +1,13 @@
+.toast-container {
+    color: #3f3f3f !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    font-family: inherit;
+    font-weight: 900;
+    text-align: center;
+}
+
+.toast-container-after {
+    overflow: hidden;
+    position: relative;
+}
