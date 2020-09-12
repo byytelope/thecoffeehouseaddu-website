@@ -26,14 +26,14 @@ export default function MenuCard(props) {
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto pt-4 ${
+                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto pt-4 pb-2 ${
                         descLength ? "" : "hidden"
                     }`}
                 >
                     {props.cardDesc}
                 </p>
             </div>
-            <div className={`flex justify-between px-6 pt-4 pb-6 ${showPrice ? "" : "hidden"}`}>
+            <div className={`flex justify-between px-6 pt-2 pb-6 ${showPrice ? "" : "hidden"}`}>
                 <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
                     <p className="self-center">{`MVR ${props.cardPrice}`}</p>
                 </div>

@@ -9,7 +9,7 @@ export default function Menu(props) {
             id: 1,
             name: "Kisinga",
             description:
-                "This naturally processed coffee has a real strawberry-forward character with delicate floral taste that rivals the best African produced coffee out there. Produced at high altitudes of 1600 – 1800 MASL; which delivers a bright acidity that shines through even the boozy notes.",
+                "This naturally processed coffee has a real strawberry-forward character with delicate floral taste that rivals the best African produced coffee out there. Produced at high altitudes of 1600 – 1800 MASL, delivering a bright acidity that shines through even the boozy notes.",
             img: props.images[9],
         },
         {

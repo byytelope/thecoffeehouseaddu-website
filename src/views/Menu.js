@@ -57,7 +57,7 @@ export default function Menu(props) {
         },
         {
             id: 6,
-            img: props.images[5],
+            img: props.images[4],
             name: "Kaishi Metaa",
             description:
                 "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
