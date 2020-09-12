@@ -6,7 +6,7 @@ import { faMugHot, faSnowflake } from "@fortawesome/free-solid-svg-icons";
 
 export default function MenuCard(props) {
     const descLength = props.cardDesc.length > 0;
-    const priceLength = props.cardPrice !== 1024;
+    const showPrice = props.cardPrice !== undefined;
 
     return (
         <motion.div
@@ -33,7 +33,7 @@ export default function MenuCard(props) {
                     {props.cardDesc}
                 </p>
             </div>
-            <div className={`flex justify-between px-6 pt-4 pb-6 ${priceLength ? "" : "hidden"}`}>
+            <div className={`flex justify-between px-6 pt-4 pb-6 ${showPrice ? "" : "hidden"}`}>
                 <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
                     <p className="self-center">{`MVR ${props.cardPrice}`}</p>
                 </div>
