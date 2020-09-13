@@ -3,6 +3,8 @@ import { Contacts, Socials } from "../components/Contacts";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
+import { Ripple } from "@rmwc/ripple";
+import "@material/ripple/dist/mdc.ripple.css";
 
 export default function Footer() {
     return (
@@ -20,17 +22,19 @@ export default function Footer() {
                 href="https://www.google.com/maps/dir/?api=1&amp;origin=&amp;destination=-0.599006,73.082549&amp;travelmode=driving"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center"
+                className="self-center select-none highlight-none"
             >
-                <motion.div
-                    className="w-64 font-medium text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out select-none highlight-none px-4 py-1"
-                    whileHover={{ scale: 1.025 }}
-                    whileTap={{ scale: 0.975 }}
-                    transition={{ type: "spring", stiffness: 250 }}
-                >
-                    <FontAwesomeIcon icon={faMapPin} />
-                    &nbsp;&nbsp;RADHEBAIGE, HITHADHOO <br />
-                </motion.div>
+                <Ripple>
+                    <motion.div
+                        className="w-64 font-medium text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-1"
+                        whileHover={{ scale: 1.025 }}
+                        whileTap={{ scale: 0.975 }}
+                        transition={{ type: "spring", stiffness: 250 }}
+                    >
+                        <FontAwesomeIcon icon={faMapPin} />
+                        &nbsp;&nbsp;RADHEBAIGE, HITHADHOO <br />
+                    </motion.div>
+                </Ripple>
             </a>
             <div className="font-regular text-center text-tch-gray-dk self-center pt-4">
                 EST.&nbsp;2020

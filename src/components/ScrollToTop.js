@@ -50,10 +50,7 @@ export default function ScrollToTop() {
                 whileTap={{ opacity: 1 }}
                 onClick={scrollTop}
             >
-                <TiArrowUp
-                    className="self-center text-tch-gray-dk"
-                    size="2.5rem"
-                />
+                <TiArrowUp className="self-center text-tch-gray-dk" size="2.5rem" />
                 <p className="self-center text-tch-gray-dk font-extrabold pr-4">Scroll to top</p>
             </motion.div>
             <BottomScrollListener onBottom={handleOnDocBottom} />

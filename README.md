@@ -1,1 +1,1 @@
-# Website for The Coffee Shop Addu
+# Website for The Coffee House Addu
