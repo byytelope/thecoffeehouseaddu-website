@@ -11,8 +11,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/HighlightNone.css";
-import { Ripple } from "@rmwc/ripple";
-import "@material/ripple/dist/mdc.ripple.css";
 
 export function Socials() {
     return (
@@ -113,42 +111,34 @@ export function Contacts() {
     return (
         <div className="grid gap-4 grid-cols-2 select-none highlight-none">
             <a href="tel:+960-7897068">
-                <Ripple>
-                    <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 250 }}
-                    >
-                        <div className="flex flex-row">
-                            <FontAwesomeIcon
-                                icon={faPhoneAlt}
-                                color="#3f3f3f"
-                                className="self-center mr-3"
-                            />
-                            <p>CALL US</p>
-                        </div>
-                    </motion.div>
-                </Ripple>
+                <motion.div
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 250 }}
+                >
+                    <div className="flex flex-row">
+                        <FontAwesomeIcon
+                            icon={faPhoneAlt}
+                            color="#3f3f3f"
+                            className="self-center mr-3"
+                        />
+                        <p>CALL US</p>
+                    </div>
+                </motion.div>
             </a>
             <a href="mailto:hello@thecoffeehouseaddu.com" target="_blank" rel="noopener noreferrer">
-                <Ripple>
-                    <motion.div
-                        className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 250 }}
-                    >
-                        <div className="flex flex-row">
-                            <FontAwesomeIcon
-                                icon={faAt}
-                                color="#3f3f3f"
-                                className="self-center mr-3"
-                            />
-                            <p>EMAIL US</p>
-                        </div>
-                    </motion.div>
-                </Ripple>
+                <motion.div
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 250 }}
+                >
+                    <div className="flex flex-row">
+                        <FontAwesomeIcon icon={faAt} color="#3f3f3f" className="self-center mr-3" />
+                        <p>EMAIL US</p>
+                    </div>
+                </motion.div>
             </a>
         </div>
     );
