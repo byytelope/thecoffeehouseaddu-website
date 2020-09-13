@@ -44,7 +44,7 @@ export default function Home() {
         <div>
             <LoyaltyContext.Provider value={{ renderLoyalty, setRenderLoyalty }}>
                 <div>
-                    <Header />
+                    <Header headerLogo={images[0]} />
                 </div>
                 <div className="flex justify-center px-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-8 select-none highlight-none">

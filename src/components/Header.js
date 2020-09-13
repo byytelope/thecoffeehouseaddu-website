@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../assets/css/Logo.css";
-import headerLogo from "../assets/img/HeaderLogo.png";
+import PropTypes from "prop-types";
 import { LoyaltyContext } from "./LoyaltyContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../assets/css/ToastDefault.css";
 
-export default function Header() {
+export default function Header(props) {
     const { setRenderLoyalty } = useContext(LoyaltyContext);
     const [showLoyalty, setShowLoyalty] = useState(0);
     const [clickTimes, setClickTimes] = useState(5);
@@ -49,7 +49,7 @@ export default function Header() {
             <ToastContainer />
             <img
                 className="photo"
-                src={headerLogo}
+                src={props.headerLogo}
                 alt="Logo"
                 draggable="false"
                 width={1340}
@@ -60,3 +60,7 @@ export default function Header() {
         </motion.div>
     );
 }
+
+Header.propTypes = {
+    headerLogo: PropTypes.string,
+};
