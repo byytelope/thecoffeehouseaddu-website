@@ -4,17 +4,20 @@ import { LoyaltyContext } from "./LoyaltyContext";
 
 export default function Buttons(props) {
     const { renderLoyalty } = useContext(LoyaltyContext);
-    let sliceAmt = -1;
+    const btnData = props.btnData;
 
     if (renderLoyalty) {
-        sliceAmt = undefined;
+        delete btnData[1];
+    } else {
+        delete btnData[0];
     }
 
-    return props.btnData.slice(0, sliceAmt).map((btnContent) => (
+    return btnData.map((btnContent) => (
         <motion.div
             key={btnContent.id}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
             transition={{
                 type: "spring",
                 stiffness: 250,

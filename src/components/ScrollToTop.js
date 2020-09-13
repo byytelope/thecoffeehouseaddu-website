@@ -43,7 +43,7 @@ export default function ScrollToTop() {
                 className={`${
                     showBtn ? "" : "pointer-events-none"
                 } scrollBtn fixed z-50 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt hover:bg-white top-0 mb-20 m-12 opacity-75 select-none`}
-                animate={{ opacity: showBtn ? 0.75 : 0 }}
+                animate={{ opacity: showBtn ? 0.85 : 0 }}
                 initial={{ opacity: 0 }}
                 transition={{ opacity: { duration: 0.4 } }}
                 whileHover={{ opacity: 1 }}

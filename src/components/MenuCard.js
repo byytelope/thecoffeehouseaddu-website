@@ -35,7 +35,7 @@ export default function MenuCard(props) {
             </div>
             <div className={`flex justify-between px-6 pt-2 pb-6 ${showPrice ? "" : "hidden"}`}>
                 <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
-                    <p className="self-center">{`MVR ${props.cardPrice}`}</p>
+                    <p className="self-center px-1">{`MVR ${props.cardPrice}`}</p>
                 </div>
                 <div className="self-center space-x-4 pr-2">
                     <FontAwesomeIcon icon={faMugHot} color="#3f3f3f" className={`${props.cardIsHot? "" : "hidden"}`} />

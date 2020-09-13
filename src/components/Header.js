@@ -11,6 +11,7 @@ export default function Header() {
     const { setRenderLoyalty } = useContext(LoyaltyContext);
     const [showLoyalty, setShowLoyalty] = useState(0);
     const [clickTimes, setClickTimes] = useState(5);
+
     const notify = () =>
         toast(`Click ${clickTimes} more times!`, {
             toastId: 1,
@@ -23,8 +24,10 @@ export default function Header() {
         setClickTimes(clickTimes - 1);
         if (showLoyalty === 0) {
             notify();
-        } else if (showLoyalty < 5) {
+        } else if (showLoyalty < 4) {
             toast.update(1, { render: `Click ${clickTimes} more times!` });
+        } else if (showLoyalty === 4) {
+            toast.update(1, { render: `Click ${clickTimes} more time!` });
         } else if (showLoyalty === 5) {
             toast.dismiss(1);
         }

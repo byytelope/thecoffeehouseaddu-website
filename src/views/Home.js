@@ -1,16 +1,16 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import "../assets/css/HighlightNone.css";
-import Header from "../components/Header";
 import Buttons from "../components/Buttons";
+import Header from "../components/Header";
+import { LoyaltyContext } from "../components/LoyaltyContext";
 import ScrollToTop from "../components/ScrollToTop";
 import About from "./About";
 import Footer from "./Footer";
+import Loyalty from "./Loyalty";
 import Menu from "./Menu";
 import Specialty from "./Specialty";
-import Loyalty from "./Loyalty";
-import { LoyaltyContext } from "../components/LoyaltyContext";
 
 export default function Home() {
     const menuRef = useRef();
@@ -18,11 +18,6 @@ export default function Home() {
     const aboutRef = useRef();
     const loyaltyRef = useRef();
     const footerRef = useRef();
-    const useAnim = useAnimation();
-
-    const cardAnimStart = () => {
-        useAnim.start("cardPosFinal");
-    };
 
     const [renderLoyalty, setRenderLoyalty] = useState(false);
     const [images, setImages] = useState([]);
@@ -38,16 +33,15 @@ export default function Home() {
     }, []);
 
     const btnData = [
+        { id: 5, text: "LOYALTY", ref: loyaltyRef.current },
         { id: 1, text: "OUR STORY", ref: aboutRef.current },
         { id: 2, text: "PRODUCTS", ref: menuRef.current },
         { id: 3, text: "SPECIALTY", ref: specialtyRef.current },
         { id: 4, text: "CONTACT US", ref: footerRef.current },
-        { id: 5, text: "LOYALTY", ref: loyaltyRef.current },
     ];
 
     return (
         <div>
-            <div>{cardAnimStart()}</div>
             <LoyaltyContext.Provider value={{ renderLoyalty, setRenderLoyalty }}>
                 <div>
                     <Header />
@@ -66,7 +60,7 @@ export default function Home() {
                 transition={{ delay: 2 }}
             >
                 <div ref={menuRef}>
-                    <Menu useAnim={useAnim} images={images} />
+                    <Menu images={images} />
                 </div>
                 <div ref={specialtyRef}>
                     <Specialty images={images} />
