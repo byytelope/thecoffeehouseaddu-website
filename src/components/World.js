@@ -3,7 +3,7 @@ import React from "react";
 export default function World() {
     return (
         <svg
-            height="350px"
+            height="70px"
             id="svg2"
             style={{
                 strokeLinejoin: "round",
@@ -11,7 +11,7 @@ export default function World() {
                 fill: "transparent",
                 opacity: "0.4",
             }}
-            width="750px"
+            width="150px"
             version="1.1"
             viewBox="0 0 2000 1000"
             xmlns="http://www.w3.org/2000/svg"

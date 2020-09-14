@@ -10,7 +10,7 @@ export default function MenuCard(props) {
 
     return (
         <motion.div
-            className="xl:max-w-sm max-w-screen-sm rounded-lg shadow-lg hover:shadow-xl"
+            className="flex flex-col justify-start xl:max-w-sm max-w-screen-sm rounded-lg shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.025 }}
             transition={{ type: "spring", stiffness: 400, damping: 50 }}
         >
@@ -21,25 +21,37 @@ export default function MenuCard(props) {
                 draggable="false"
                 onContextMenu={(e) => e.preventDefault()}
             />
-            <div className="text-center px-6 py-4">
+            <div className="text-center px-6 py-4 flex-grow">
                 <div className="font-semibold text-tch-gray-dk text-xl md:text-2xl xl:text-lg mb-2">
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left overflow-auto pt-4 pb-2 ${
+                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk text-left pt-4 pb-2 ${
                         descLength ? "" : "hidden"
                     }`}
                 >
                     {props.cardDesc}
                 </p>
             </div>
-            <div className={`flex justify-between px-6 pt-2 pb-6 ${showPrice ? "" : "hidden"}`}>
-                <div className="flex justify-center md:w-1/6 lg:w-3/12 xl:w-3/12 rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
+            <div
+                className={`flex flex-row justify-between px-6 pt-2 pb-6 ${
+                    showPrice ? "" : "hidden"
+                }`}
+            >
+                <div className="flex justify-center rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
                     <p className="self-center px-1">{`MVR ${props.cardPrice}`}</p>
                 </div>
                 <div className="self-center space-x-4 pr-2">
-                    <FontAwesomeIcon icon={faMugHot} color="#3f3f3f" className={`${props.cardIsHot? "" : "hidden"}`} />
-                    <FontAwesomeIcon icon={faSnowflake} color="#3f3f3f" className={`${props.cardIsCold? "" : "hidden"}`} />
+                    <FontAwesomeIcon
+                        icon={faMugHot}
+                        color="#3f3f3f"
+                        className={`${props.cardIsHot ? "" : "hidden"}`}
+                    />
+                    <FontAwesomeIcon
+                        icon={faSnowflake}
+                        color="#3f3f3f"
+                        className={`${props.cardIsCold ? "" : "hidden"}`}
+                    />
                 </div>
             </div>
         </motion.div>

@@ -44,7 +44,7 @@ export default function Header(props) {
             className="flex justify-center w-full py-16"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 2.5 }}
         >
             <ToastContainer />
             <img
