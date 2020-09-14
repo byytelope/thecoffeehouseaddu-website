@@ -7,7 +7,7 @@ export default function Menu(props) {
     const data = [
         {
             id: 1,
-            img: props.images[2],
+            img: [props.images[2]],
             name: "Cold-brew Tonic",
             description:
                 "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, chocolate and stronger notes of dried plum in fusion with sparkling tonic water to quench your thirst in the tropical weather of Maldives.",
@@ -17,7 +17,7 @@ export default function Menu(props) {
         },
         {
             id: 2,
-            img: props.images[1],
+            img: [props.images[1]],
             name: "Filter Coffee",
             description:
                 "Sourced from countries like Brazil, Tanzania, Uganda and Ethiopia, our filter coffee is hand-brewed and filtered to get a coffee that is clear, light-bodied and flavorful while retaining all the notes of the coffee bean.",
@@ -27,7 +27,7 @@ export default function Menu(props) {
         },
         {
             id: 3,
-            img: props.images[5],
+            img: [props.images[5]],
             name: "Sparkling Coffee",
             description:
                 "Whoever said a blend of coffee and a fizzy drink can't go well, hasn't tried our Sparkling Coffee yet; which consists of a flavourful cold brew with a mixed-berry syrup concoction, packing a punch of fizziness.",
@@ -37,7 +37,7 @@ export default function Menu(props) {
         },
         {
             id: 4,
-            img: props.images[6],
+            img: [props.images[6]],
             name: "Japanese Iced-Coffee",
             description:
                 "Japanese Iced-Coffee is made with a method used by the Japanese to brew coffee and to instantly cool it down in the process, allowing us to extract flavorful notes from the beans in minutes rather than hours.",
@@ -47,7 +47,7 @@ export default function Menu(props) {
         },
         {
             id: 5,
-            img: props.images[3],
+            img: [props.images[3]],
             name: "Vietnamese Brew",
             description:
                 "The perfect fusion of coffee and milk, made with one of the most famous street-style methods of brewing coffee in Vietnam; this coffee consists of single-origin filter coffee to a small ratio of sweetened condensed milk.",
@@ -57,13 +57,24 @@ export default function Menu(props) {
         },
         {
             id: 6,
-            img: props.images[4],
+            img: [props.images[4]],
             name: "Kaishi Metaa",
             description:
                 "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
             price: 45,
             is_cold: true,
             is_hot: false,
+        },
+        {
+            id: 7,
+            img: [props.images[4], props.images[5], props.images[6]],
+            img_many: true,
+            name: "Chocolate-Fudge Brownies",
+            description:
+                "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
+            price: 30,
+            is_food: true,
+            sale_price: 27,
         },
     ];
 
@@ -83,12 +94,15 @@ export default function Menu(props) {
             >
                 <MenuCard
                     key={content.id}
-                    cardImage={content.img}
+                    cardImages={content.img}
+                    cardImageMany={content.img_many}
                     cardName={content.name}
                     cardDesc={content.description}
                     cardPrice={content.price}
+                    cardSalePrice={content.sale_price}
                     cardIsCold={content.is_cold}
                     cardIsHot={content.is_hot}
+                    cardIsFood={content.is_food}
                 />
             </motion.div>
         ));

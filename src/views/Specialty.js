@@ -6,21 +6,21 @@ export default function Menu(props) {
     const data = [
         {
             id: 1,
-            img: props.images[9],
+            img: [props.images[9]],
             name: "Kisinga",
             description:
                 "This naturally processed coffee has a real strawberry-forward character with delicate floral taste that rivals the best African produced coffee out there. Produced at high altitudes of 1600 – 1800 MASL, delivering a bright acidity that shines through even the boozy notes.",
         },
         {
             id: 2,
-            img: props.images[8],
+            img: [props.images[8]],
             name: "Bela Vista",
             description:
                 "Produced under best agricultural practices with full traceability, certified by Utz Good Inside, the farm producing this coffee sponsors a primary school to the worker's children and the rural community which surrounds the farm. Fazenda Bela Vista Washed Yellow Burbon has notes of red fruit, mild acidity and a creamy body.",
         },
         {
             id: 3,
-            img: props.images[7],
+            img: [props.images[7]],
             name: "Capim Branco",
             description:
                 "Grown in the Cerrado Mineiro region in Brazil, 1100 to 1250 meters above sea level, providing an ideal coffee production due to the perfect balance of wet and dry seasons. The volcanic environment in which the farm is in and the attentive husbandry produces uniform blossoming and maturation creating excellent conditions for processing the sweet, fruity coffee with slight hints of chocolate and orange notes.",
@@ -31,7 +31,7 @@ export default function Menu(props) {
         return data.map((content) => (
             <MenuCard
                 key={content.id}
-                cardImage={content.img}
+                cardImages={content.img}
                 cardName={content.name}
                 cardDesc={content.description}
             />

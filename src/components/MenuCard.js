@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugHot, faSnowflake } from "@fortawesome/free-solid-svg-icons";
+import { faMugHot, faSnowflake, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import ImageCarousel from "../components/ImageCarousel";
 
 export default function MenuCard(props) {
     const descLength = props.cardDesc.length > 0;
@@ -14,13 +15,17 @@ export default function MenuCard(props) {
             whileHover={{ scale: 1.025 }}
             transition={{ type: "spring", stiffness: 400, damping: 50 }}
         >
-            <img
-                className="w-full rounded-lg"
-                src={props.cardImage}
-                alt="Drink"
-                draggable="false"
-                onContextMenu={(e) => e.preventDefault()}
-            />
+            {props.cardImageMany ? (
+                <ImageCarousel cardImages={props.cardImages} />
+            ) : (
+                <img
+                    className="w-full rounded-lg"
+                    src={props.cardImages[0]}
+                    alt={props.cardName}
+                    draggable="false"
+                    onContextMenu={(e) => e.preventDefault()}
+                />
+            )}
             <div className="text-center px-6 py-4 flex-grow">
                 <div className="font-semibold text-tch-gray-dk text-xl md:text-2xl xl:text-lg mb-2">
                     {props.cardName}
@@ -38,8 +43,19 @@ export default function MenuCard(props) {
                     showPrice ? "" : "hidden"
                 }`}
             >
-                <div className="flex justify-center rounded-full font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt">
-                    <p className="self-center px-1">{`MVR ${props.cardPrice}`}</p>
+                <div
+                    className={`flex justify-center ${
+                        props.cardSalePrice ? "rounded-lg" : "rounded-full"
+                    } font-extrabold text-tch-gray-dk px-2 py-1 bg-tch-gray-lt`}
+                >
+                    {props.cardSalePrice ? (
+                        <div className="flex flex-col self-center px-1">
+                            <s className="text-red-500">{`MVR ${props.cardPrice}`}</s>
+                            <p className="">{`MVR ${props.cardSalePrice}`}</p>
+                        </div>
+                    ) : (
+                        <p className="self-center px-1">{`MVR ${props.cardPrice}`}</p>
+                    )}
                 </div>
                 <div className="self-center space-x-4 pr-2">
                     <FontAwesomeIcon
@@ -52,6 +68,11 @@ export default function MenuCard(props) {
                         color="#3f3f3f"
                         className={`${props.cardIsCold ? "" : "hidden"}`}
                     />
+                    <FontAwesomeIcon
+                        icon={faUtensils}
+                        color="#3f3f3f"
+                        className={`${props.cardIsFood ? "" : "hidden"}`}
+                    />
                 </div>
             </div>
         </motion.div>
@@ -59,10 +80,13 @@ export default function MenuCard(props) {
 }
 
 MenuCard.propTypes = {
-    cardImage: PropTypes.string,
+    cardImages: PropTypes.array,
+    cardImageMany: PropTypes.bool,
     cardName: PropTypes.string,
     cardDesc: PropTypes.string,
     cardPrice: PropTypes.number,
+    cardSalePrice: PropTypes.number,
     cardIsHot: PropTypes.bool,
     cardIsCold: PropTypes.bool,
+    cardIsFood: PropTypes.bool,
 };
