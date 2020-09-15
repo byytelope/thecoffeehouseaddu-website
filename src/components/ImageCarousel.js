@@ -12,7 +12,7 @@ const variants = {
     active: {
         x: 0,
         opacity: 1,
-        transition: { delay: 0.2 },
+        transition: { delay: 0.2, type: "spring" },
     },
     exit: (direction) => ({
         x: direction > 0 ? -xOffset : xOffset,
