@@ -27,7 +27,7 @@ const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
         return (
             <motion.img
                 key={currentPage}
-                className="rounded-lg"
+                className="rounded-lg w-full"
                 src={imageList[currentPage]}
                 variants={variants}
                 initial="enter"

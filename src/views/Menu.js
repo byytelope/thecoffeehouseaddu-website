@@ -67,8 +67,7 @@ export default function Menu(props) {
         },
         {
             id: 7,
-            img: [props.images[4], props.images[5], props.images[6]],
-            img_many: true,
+            img: [props.images[12], props.images[11], props.images[10]],
             name: "Chocolate-Fudge Brownies",
             description:
                 "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
@@ -95,7 +94,6 @@ export default function Menu(props) {
                 <MenuCard
                     key={content.id}
                     cardImages={content.img}
-                    cardImageMany={content.img_many}
                     cardName={content.name}
                     cardDesc={content.description}
                     cardPrice={content.price}

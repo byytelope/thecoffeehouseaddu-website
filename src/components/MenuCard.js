@@ -8,6 +8,7 @@ import ImageCarousel from "../components/ImageCarousel";
 export default function MenuCard(props) {
     const descLength = props.cardDesc.length > 0;
     const showPrice = props.cardPrice !== undefined;
+    const showCarousel = props.cardImages.length > 1;
 
     return (
         <motion.div
@@ -15,7 +16,7 @@ export default function MenuCard(props) {
             whileHover={{ scale: 1.025 }}
             transition={{ type: "spring", stiffness: 400, damping: 50 }}
         >
-            {props.cardImageMany ? (
+            {showCarousel ? (
                 <ImageCarousel cardImages={props.cardImages} />
             ) : (
                 <img
@@ -81,7 +82,6 @@ export default function MenuCard(props) {
 
 MenuCard.propTypes = {
     cardImages: PropTypes.array,
-    cardImageMany: PropTypes.bool,
     cardName: PropTypes.string,
     cardDesc: PropTypes.string,
     cardPrice: PropTypes.number,
