@@ -70,7 +70,7 @@ export default function Menu(props) {
             img: [props.images[12], props.images[11], props.images[10]],
             name: "Chocolate-Fudge Brownies",
             description:
-                "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
+                "Made from scratch and with lots of love, these delicious and gooey chocolate fudge brownies are a definite must-try for anyone with chocolate cravings.",
             price: 30,
             is_food: true,
             sale_price: 27,
