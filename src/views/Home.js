@@ -1,16 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import "../assets/css/HighlightNone.css";
+
 import Buttons from "../components/Buttons";
 import Header from "../components/Header";
-import { LoyaltyContext } from "../components/LoyaltyContext";
 import ScrollToTop from "../components/ScrollToTop";
+
 import About from "./About";
 import Footer from "./Footer";
 import Loyalty from "./Loyalty";
 import Menu from "./Menu";
 import Specialty from "./Specialty";
+
+import "../assets/css/HighlightNone.css";
+
+import { LoyaltyContext } from "../contexts/LoyaltyContext";
 
 export default function Home() {
     const menuRef = useRef();
@@ -27,7 +31,7 @@ export default function Home() {
             const response = await axios.get(
                 "https://google-photos-album-demo2.glitch.me/v3jsgKUCsjbpbMZW7"
             );
-            setImages(response.data);
+            setImages(await response.data);
         }
         fetchImages();
     }, []);
@@ -52,13 +56,7 @@ export default function Home() {
                     </div>
                 </div>
             </LoyaltyContext.Provider>
-            <motion.div
-                initial={{
-                    opacity: 0,
-                }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2 }}
-            >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}>
                 <div ref={menuRef}>
                     <Menu images={images} />
                 </div>

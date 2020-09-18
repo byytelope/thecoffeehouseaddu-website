@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import MenuCard from "../components/MenuCard";
 
 export default function Menu(props) {

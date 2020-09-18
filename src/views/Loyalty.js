@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import QRCode from "react-qr-code";
-import { LoyaltyContext } from "../components/LoyaltyContext";
+
+import { LoyaltyContext } from "../contexts/LoyaltyContext";
 
 export default function Loyalty() {
     const { renderLoyalty } = useContext(LoyaltyContext);

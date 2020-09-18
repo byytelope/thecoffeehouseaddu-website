@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "../assets/css/Logo.css";
-import PropTypes from "prop-types";
-import { LoyaltyContext } from "./LoyaltyContext";
 import { ToastContainer, toast } from "react-toastify";
+import PropTypes from "prop-types";
+
+import { LoyaltyContext } from "../contexts/LoyaltyContext";
+
+import "../assets/css/Logo.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../assets/css/ToastDefault.css";
 
@@ -15,7 +17,7 @@ export default function Header(props) {
     const notify = () =>
         toast(`Click ${clickTimes} more times!`, {
             toastId: 1,
-            className: "toast-container toast-container-after font-header",
+            className: "toast-container toast-container-after font-extrabold",
             hideProgressBar: true,
         });
 

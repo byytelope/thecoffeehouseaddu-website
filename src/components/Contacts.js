@@ -10,6 +10,7 @@ import {
     faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+
 import "../assets/css/HighlightNone.css";
 
 export function Socials() {

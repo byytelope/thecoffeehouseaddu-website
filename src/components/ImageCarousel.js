@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import PropTypes from "prop-types";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import PropTypes from "prop-types";
 import { wrap } from "@popmotion/popcorn";
 
 const xOffset = 10;
@@ -12,7 +12,7 @@ const variants = {
     active: {
         x: 0,
         opacity: 1,
-        transition: { delay: 0.2, type: "spring" },
+        transition: { delay: 0.3, type: "spring" },
     },
     exit: (direction) => ({
         x: direction > 0 ? -xOffset : xOffset,

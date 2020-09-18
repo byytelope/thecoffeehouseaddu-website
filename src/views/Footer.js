@@ -1,8 +1,9 @@
 import React from "react";
-import { Contacts, Socials } from "../components/Contacts";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { Contacts, Socials } from "../components/Contacts";
 
 export default function Footer() {
     return (

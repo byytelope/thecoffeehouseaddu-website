@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { LoyaltyContext } from "./LoyaltyContext";
+
+import { LoyaltyContext } from "../contexts/LoyaltyContext";
 
 export default function Buttons(props) {
     const { renderLoyalty } = useContext(LoyaltyContext);

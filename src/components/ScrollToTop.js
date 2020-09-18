@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { TiArrowUp } from "react-icons/ti";
 import BottomScrollListener from "react-bottom-scroll-listener";
+import { TiArrowUp } from "react-icons/ti";
+
 import "../assets/css/ScrollBtn.css";
 
 export default function ScrollToTop() {

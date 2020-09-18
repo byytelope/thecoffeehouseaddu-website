@@ -1,8 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faSnowflake, faUtensils } from "@fortawesome/free-solid-svg-icons";
+
 import ImageCarousel from "../components/ImageCarousel";
 
 export default function MenuCard(props) {

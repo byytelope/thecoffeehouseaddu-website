@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import MenuCard from "../components/MenuCard";
 import PropTypes from "prop-types";
 
-export default function Menu(props) {
+import MenuCard from "../components/MenuCard";
+
+const Menu = React.memo(function Menu(props) {
     const data = [
         {
             id: 1,
@@ -127,7 +128,9 @@ export default function Menu(props) {
             </div>
         </div>
     );
-}
+});
+
+export default Menu;
 
 Menu.propTypes = {
     images: PropTypes.array,
