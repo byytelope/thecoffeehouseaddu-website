@@ -29,6 +29,7 @@ const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
                 key={currentPage}
                 className="rounded-lg w-full"
                 src={imageList[currentPage]}
+                alt="Multiple image product"
                 variants={variants}
                 initial="enter"
                 animate="active"
@@ -76,6 +77,7 @@ const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
                 // This will be used for components to resolve exit variants. It's neccessary
                 // as removed components won't rerender with the latest state (as they've been removed)
                 custom={direction}
+                exitBeforeEnter
             >
                 <Images />
             </AnimatePresence>
@@ -87,7 +89,7 @@ const Pagination = ({ currentPage, setPage, pages }) => {
     // Wrap all the pagination dots with AnimateSharedPresence so we can detect
     // when dots with a layoutId are removed/added
     return (
-        <AnimateSharedLayout>
+        <AnimateSharedLayout exitBeforeEnter>
             <div className="flex justify-center mt-3 p-4 space-x-8">
                 {pages.map((page) => (
                     <Dot

@@ -1,8 +1,10 @@
 @tailwind base;
 
 @font-face {
-    font-family: javata-regular;
-    src: url(assets/fonts/JAVATA.otf) format("woff");
+    font-family: "Assistant";
+    font-family: "Montserrat"
+    /* src: url(assets/fonts/JAVATA.otf) format("woff");
+     */
 }
 
 @tailwind components;

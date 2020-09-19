@@ -117,7 +117,7 @@ const Menu = React.memo(function Menu(props) {
                     are here to change the coffee-culture in Addu.
                 </p>
             </div>
-            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0 md:space-x-6 lg:space-x-8 xl:space-x-8 font-semibold text-md text-tch-gray-dk pt-4 pb-12">
+            <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0 md:space-x-6 lg:space-x-8 xl:space-x-8 font-header text-base text-tch-gray-dk pt-4 pb-12">
                 <div className="w-auto shadow-md rounded-full p-2 px-4">#SINGLEORIGINCOFFEE</div>
                 <div className="w-auto shadow-md rounded-full p-2 px-4">#ETHICALLYSOURCED</div>
             </div>

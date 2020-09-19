@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex justify-center py-8 pt-12">
                 <Contacts />
             </div>
-            <div className="font-extrabold text-xl text-center text-tch-gray-dk self-center pb-2">
+            <div className="font-header text-1.5xl text-center text-tch-gray-dk self-center pb-2">
                 THE COFFEE HOUSE ADDU
             </div>
             <a
@@ -24,7 +24,7 @@ export default function Footer() {
                 className="self-center select-none highlight-none"
             >
                 <motion.div
-                    className="w-64 font-medium text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-1"
+                    className="w-auto font-bold text-center text-tch-gray-dk self-center rounded-full hover:shadow-md bg-tch-gray-lt hover:bg-tch-gray-md cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-1"
                     whileHover={{ scale: 1.025 }}
                     whileTap={{ scale: 0.975 }}
                     transition={{ type: "spring", stiffness: 250 }}

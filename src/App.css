@@ -578,9 +578,12 @@ video {
 }
 
 @font-face {
-  font-family: javata-regular;
+  font-family: "Assistant";
 
-  src: url(assets/fonts/JAVATA.otf) format("woff");
+  font-family: "Montserrat"
+
+  /* src: url(assets/fonts/JAVATA.otf) format("woff");
+     */
 }
 
 .container {
@@ -10766,7 +10769,7 @@ video {
 }
 
 .font-header {
-  font-family: javata-regular;
+  font-family: Assistant;
 }
 
 .font-body {
@@ -11043,6 +11046,10 @@ video {
 
 .text-6xl {
   font-size: 4rem;
+}
+
+.text-1\.5xl {
+  font-size: 1.375rem;
 }
 
 .text-5\.5xl {
@@ -31129,7 +31136,7 @@ video {
   }
 
   .sm\:font-header {
-    font-family: javata-regular;
+    font-family: Assistant;
   }
 
   .sm\:font-body {
@@ -31406,6 +31413,10 @@ video {
 
   .sm\:text-6xl {
     font-size: 4rem;
+  }
+
+  .sm\:text-1\.5xl {
+    font-size: 1.375rem;
   }
 
   .sm\:text-5\.5xl {
@@ -51462,7 +51473,7 @@ video {
   }
 
   .md\:font-header {
-    font-family: javata-regular;
+    font-family: Assistant;
   }
 
   .md\:font-body {
@@ -51739,6 +51750,10 @@ video {
 
   .md\:text-6xl {
     font-size: 4rem;
+  }
+
+  .md\:text-1\.5xl {
+    font-size: 1.375rem;
   }
 
   .md\:text-5\.5xl {
@@ -71795,7 +71810,7 @@ video {
   }
 
   .lg\:font-header {
-    font-family: javata-regular;
+    font-family: Assistant;
   }
 
   .lg\:font-body {
@@ -72072,6 +72087,10 @@ video {
 
   .lg\:text-6xl {
     font-size: 4rem;
+  }
+
+  .lg\:text-1\.5xl {
+    font-size: 1.375rem;
   }
 
   .lg\:text-5\.5xl {
@@ -92128,7 +92147,7 @@ video {
   }
 
   .xl\:font-header {
-    font-family: javata-regular;
+    font-family: Assistant;
   }
 
   .xl\:font-body {
@@ -92405,6 +92424,10 @@ video {
 
   .xl\:text-6xl {
     font-size: 4rem;
+  }
+
+  .xl\:text-1\.5xl {
+    font-size: 1.375rem;
   }
 
   .xl\:text-5\.5xl {

@@ -27,7 +27,7 @@ export default function Buttons(props) {
         >
             <motion.div
                 key={btnContent.id}
-                className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-xl font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out py-4 px-6"
+                className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk text-1.5xl font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out py-4 px-6"
                 onClick={() =>
                     window.scrollTo({ behavior: "smooth", top: btnContent.ref.offsetTop })
                 }

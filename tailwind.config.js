@@ -15,6 +15,7 @@ module.exports = {
                 white: "#ffffff",
             },
             fontSize: {
+                "1.5xl": "1.375rem",
                 "5.5xl": "3.5rem",
             },
             scale: {
@@ -22,7 +23,7 @@ module.exports = {
                 25: ".25",
             },
             spacing: {
-                "1.5": "6px",
+                1.5: "6px",
                 72: "18rem",
                 80: "20rem",
                 88: "22rem",
@@ -34,7 +35,7 @@ module.exports = {
             },
         },
         fontFamily: {
-            header: ["javata-regular"],
+            header: ["Assistant"],
             body: ["Montserrat"],
         },
     },

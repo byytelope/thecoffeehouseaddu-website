@@ -113,7 +113,7 @@ export function Contacts() {
         <div className="grid gap-4 grid-cols-2 select-none highlight-none">
             <a href="tel:+960-7897068">
                 <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 250 }}
@@ -122,22 +122,22 @@ export function Contacts() {
                         <FontAwesomeIcon
                             icon={faPhoneAlt}
                             color="#3f3f3f"
-                            className="self-center mr-3"
+                            className="self-center mr-4"
                         />
-                        <p>CALL US</p>
+                        <p className="text-lg">CALL US</p>
                     </div>
                 </motion.div>
             </a>
             <a href="mailto:hello@thecoffeehouseaddu.com" target="_blank" rel="noopener noreferrer">
                 <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-extrabold cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    className="w-full-sm rounded-lg bg-tch-gray-lt hover:bg-tch-gray-md hover:shadow-lg text-center text-tch-gray-dk font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 250 }}
                 >
                     <div className="flex flex-row">
                         <FontAwesomeIcon icon={faAt} color="#3f3f3f" className="self-center mr-3" />
-                        <p>EMAIL US</p>
+                        <p className="text-lg">EMAIL US</p>
                     </div>
                 </motion.div>
             </a>
