@@ -118,8 +118,8 @@ const Menu = React.memo(function Menu(props) {
                 </p>
             </div>
             <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0 md:space-x-6 lg:space-x-8 xl:space-x-8 font-header text-base text-tch-gray-dk pt-4 pb-12">
-                <div className="w-auto shadow-md rounded-full p-2 px-4">#SINGLEORIGINCOFFEE</div>
-                <div className="w-auto shadow-md rounded-full p-2 px-4">#ETHICALLYSOURCED</div>
+                <div className="w-auto shadow-md rounded-full pt-2 pb-1 px-4">#ETHICALLYSOURCED</div>
+                <div className="w-auto shadow-md rounded-full pt-2 pb-1 px-4">#SINGLEORIGINCOFFEE</div>
             </div>
             <div className="flex justify-center p-6 px-8 sm:px-24 md:px-24 lg:px-24 xl:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 pb-8">

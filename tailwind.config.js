@@ -1,5 +1,5 @@
 module.exports = {
-    purge: [],
+    purge: ["./src/App.js", "./src/components/*.js", "./src/views/*.js"],
     theme: {
         future: {
             purgeLayersByDefault: true,
