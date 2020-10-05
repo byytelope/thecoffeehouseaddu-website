@@ -5,11 +5,12 @@ import PropTypes from "prop-types";
 
 import { LoyaltyContext } from "../contexts/LoyaltyContext";
 
+import HeaderLogo from "../assets/img/HeaderLogo.webp";
 import "../assets/css/Logo.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../assets/css/ToastDefault.css";
 
-export default function Header(props) {
+export default function Header() {
     const { setRenderLoyalty } = useContext(LoyaltyContext);
     const [showLoyalty, setShowLoyalty] = useState(0);
     const [clickTimes, setClickTimes] = useState(5);
@@ -51,7 +52,7 @@ export default function Header(props) {
             <ToastContainer />
             <img
                 className="photo"
-                src={props.headerLogo}
+                src={HeaderLogo}
                 alt="Logo"
                 draggable="false"
                 width={1340}
