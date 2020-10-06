@@ -27,8 +27,8 @@ export function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faFacebook} color="#1877F2" size="2x" />
+                    <div className="text-facebook dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faFacebook} size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -43,8 +43,8 @@ export function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faInstagram} color="#E1306C" size="2x" />
+                    <div className="text-instagram dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -55,8 +55,8 @@ export function Socials() {
                 transition={{ type: "spring", stiffness: 300 }}
             >
                 <a href="viber://chat?number=9607897068" target="_blank" rel="noopener noreferrer">
-                    <div>
-                        <FontAwesomeIcon icon={faViber} color="#7360F2" size="2x" />
+                    <div className="text-viber dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faViber} size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -71,8 +71,8 @@ export function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faTwitter} color="#1DA1F2" size="2x" />
+                    <div className="text-twitter dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faTwitter} size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -87,8 +87,8 @@ export function Socials() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div>
-                        <FontAwesomeIcon icon={faTelegramPlane} color="#0088CC" size="2x" />
+                    <div className="text-telegram dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faTelegramPlane} size="2x" />
                     </div>
                 </a>
             </motion.div>
@@ -99,8 +99,8 @@ export function Socials() {
                 transition={{ type: "spring", stiffness: 300 }}
             >
                 <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
-                    <div>
-                        <FontAwesomeIcon icon={faWhatsapp} color="#25D366" size="2x" />
+                    <div className="text-whatsapp dark:text-tch-gray-md">
+                        <FontAwesomeIcon icon={faWhatsapp} size="2x" />
                     </div>
                 </a>
             </motion.div>

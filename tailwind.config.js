@@ -2,7 +2,11 @@ module.exports = {
     experimental: {
         darkModeVariant: true,
     },
-    purge: ["./src/App.js", "./src/components/*.js", "./src/views/*.js"],
+    purge: {
+        mode: "layers",
+        layers: ["base", "components", "utilities"],
+        content: ["./src/App.js", "./src/components/*.js", "./src/views/*.js", "./src/pages/*.js"],
+    },
     theme: {
         future: {
             purgeLayersByDefault: true,
@@ -10,6 +14,12 @@ module.exports = {
         },
         extend: {
             colors: {
+                facebook: "#1877F2",
+                instagram: "#E1306C",
+                twitter: "#1DA1F2",
+                telegram: "#0088CC",
+                viber: "#7360F2",
+                whatsapp: "#25D366",
                 "tch-gray-lt0": "#fafafa",
                 "tch-gray-lt": "#f2f2f2",
                 "tch-gray-md": "#e0e0e0",
