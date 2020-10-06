@@ -106,12 +106,12 @@ const Pagination = ({ currentPage, setPage, pages }) => {
 const Dot = ({ isSelected, onClick }) => {
     return (
         <div className="cursor-pointer" onClick={onClick}>
-            <div className="rounded-full bg-tch-gray-md p-1.5">
+            <div className="rounded-full bg-tch-gray-md dark:bg-tch-dark-surface-2 p-1.5">
                 {isSelected && (
                     // By setting layoutId, when this component is removed and a new one
                     // is added elsewhere, the new component will animate out from the old one.
                     <motion.div
-                        className="rounded-full bg-tch-gray-dk p-1.5 absolute -m-1.5 z-10"
+                        className="rounded-full bg-tch-gray-dk dark:bg-tch-dark-surface-3 p-1.5 absolute -m-1.5 z-10"
                         layoutId="highlight"
                     />
                 )}

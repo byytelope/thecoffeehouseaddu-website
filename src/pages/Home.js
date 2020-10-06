@@ -6,11 +6,11 @@ import Buttons from "../components/Buttons";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
 
-import About from "./About";
-import Footer from "./Footer";
-import Loyalty from "./Loyalty";
-import Menu from "./Menu";
-import Specialty from "./Specialty";
+import About from "../views/About";
+import Footer from "../views/Footer";
+import Loyalty from "../views/Loyalty";
+import Menu from "../views/Menu";
+import Specialty from "../views/Specialty";
 
 import "../assets/css/HighlightNone.css";
 
@@ -45,7 +45,7 @@ export default function Home() {
     ];
 
     return (
-        <div>
+        <div className="dark:bg-tch-dark-surface">
             <LoyaltyContext.Provider value={{ renderLoyalty, setRenderLoyalty }}>
                 <div>
                     <Header headerLogo={images[0]} />
