@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import MenuCard from "../components/MenuCard";
 
@@ -11,7 +10,6 @@ export default function Menu() {
     const data = [
         {
             id: 1,
-            // img: [props.images[9]],
             img: [IMGKisinga],
             name: "Kisinga",
             description:
@@ -19,7 +17,6 @@ export default function Menu() {
         },
         {
             id: 2,
-            // img: [props.images[8]],
             img: [IMGBelaVista],
             name: "Bela Vista",
             description:
@@ -27,7 +24,6 @@ export default function Menu() {
         },
         {
             id: 3,
-            // img: [props.images[7]],
             img: [IMGCapimBranco],
             name: "Capim Branco",
             description:
@@ -62,7 +58,3 @@ export default function Menu() {
         </div>
     );
 }
-
-Menu.propTypes = {
-    images: PropTypes.array,
-};

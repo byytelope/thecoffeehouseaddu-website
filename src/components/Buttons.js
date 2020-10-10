@@ -1,17 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-import { LoyaltyContext } from "../contexts/LoyaltyContext";
-
 export default function Buttons(props) {
-    const { renderLoyalty } = useContext(LoyaltyContext);
     const btnData = props.btnData;
-
-    if (renderLoyalty) {
-        delete btnData[1];
-    } else {
-        delete btnData[0];
-    }
 
     return btnData.map((btnContent) => (
         <motion.div
@@ -29,7 +20,7 @@ export default function Buttons(props) {
                 key={btnContent.id}
                 className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md text-1.5xl font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out py-4 px-6"
                 onClick={() =>
-                    window.scrollTo({ behavior: "smooth", top: btnContent.ref.offsetTop })
+                    window.scrollTo({ behavior: "smooth", top: btnContent.ref.current.offsetTop })
                 }
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

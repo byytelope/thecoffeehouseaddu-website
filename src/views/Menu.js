@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
 import MenuCard from "../components/MenuCard";
 
@@ -10,6 +9,7 @@ import IMGSparklingCoffee from "../assets/img/products/Sparkling_Coffee.webp";
 import IMGJapaneseIcedCoffee from "../assets/img/products/Japanese_Cold_Brew.webp";
 import IMGVietnameseBrew from "../assets/img/products/Vietnamese_Brew.webp";
 import IMGKaishiMetaa from "../assets/img/products/Kaishi_Metaa.webp";
+import IMGClassicPeachMojito from "../assets/img/products/Classic_Peach_Mojito.webp";
 import IMGBrownies1 from "../assets/img/products/Chocolate-Fudge_Brownie_1.webp";
 import IMGBrownies2 from "../assets/img/products/Chocolate-Fudge_Brownie_2.webp";
 import IMGBrownies3 from "../assets/img/products/Chocolate-Fudge_Brownie_3.webp";
@@ -18,51 +18,42 @@ const Menu = React.memo(function Menu() {
     const data = [
         {
             id: 1,
-            // img: [props.images[2]],
             img: [IMGColdBrewTonic],
             name: "Cold-brew Tonic",
             description:
                 "Brewed over fifteen hours, this cold brew tonic has slight notes of cherry, chocolate and stronger notes of dried plum in fusion with sparkling tonic water to quench your thirst in the tropical weather of Maldives.",
             price: 40,
             is_cold: true,
-            is_hot: false,
         },
         {
             id: 2,
-            // img: [props.images[1]],
             img: [IMGFilterCoffe],
             name: "Filter Coffee",
             description:
                 "Sourced from countries like Brazil, Tanzania, Uganda and Ethiopia, our filter coffee is hand-brewed and filtered to get a coffee that is clear, light-bodied and flavorful while retaining all the notes of the coffee bean.",
             price: 30,
-            is_cold: false,
             is_hot: true,
         },
         {
             id: 3,
-            // img: [props.images[5]],
             img: [IMGSparklingCoffee],
             name: "Sparkling Coffee",
             description:
                 "Whoever said a blend of coffee and a fizzy drink can't go well, hasn't tried our Sparkling Coffee yet; which consists of a flavourful cold brew with a mixed-berry syrup concoction, packing a punch of fizziness.",
             price: 45,
             is_cold: true,
-            is_hot: false,
         },
         {
             id: 4,
-            // img: [props.images[6]],
             img: [IMGJapaneseIcedCoffee],
             name: "Japanese Iced-Coffee",
             description:
                 "Japanese Iced-Coffee is made with a method used by the Japanese to brew coffee and to instantly cool it down in the process, allowing us to extract flavorful notes from the beans in minutes rather than hours.",
             price: 35,
             is_cold: true,
-            is_hot: false,
         },
         {
             id: 5,
-            // img: [props.images[3]],
             img: [IMGVietnameseBrew],
             name: "Vietnamese Brew",
             description:
@@ -73,18 +64,24 @@ const Menu = React.memo(function Menu() {
         },
         {
             id: 6,
-            // img: [props.images[4]],
             img: [IMGKaishiMetaa],
             name: "Kaishi Metaa",
             description:
                 "Cold-brew coffee infused with Maldivian culture; this drink will remind you of a Maldivian's humble beginnings. The drink consists of cold-brew coffee with a home-made coconut infusion and coconut milk.",
             price: 45,
             is_cold: true,
-            is_hot: false,
         },
         {
             id: 7,
-            // img: [props.images[12], props.images[11], props.images[10]],
+            img: [IMGClassicPeachMojito],
+            name: "Classic Peach Mojito",
+            description:
+                "Our first non-coffee; the Classic Peach Mojito consists of a cocktail-like mixture of peaches, lime-wedges and mint leaves. This drink is perfect to quench your thirst on a sunny day, delivering an exquisite sweet taste complimenting the mint flavour along with it.",
+            price: 45,
+            is_cold: true,
+        },
+        {
+            id: 8,
             img: [IMGBrownies1, IMGBrownies2, IMGBrownies3],
             name: "Chocolate-Fudge Brownies",
             description:
@@ -100,13 +97,12 @@ const Menu = React.memo(function Menu() {
             <motion.div
                 key={content.id}
                 className="flex"
-                animate={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{
                     type: "spring",
-                    delay: 1.5 + content.id / 10,
+                    delay: 2.2 + content.id / 10,
                     stiffness: 200,
-                    staggerChildren: 0.3,
                 }}
             >
                 <MenuCard
@@ -152,7 +148,3 @@ const Menu = React.memo(function Menu() {
 });
 
 export default Menu;
-
-Menu.propTypes = {
-    images: PropTypes.array,
-};

@@ -11,3 +11,12 @@
     overflow: hidden;
     position: relative;
 }
+
+@media (prefers-color-scheme: dark) {
+    .dark\:bg-dark {
+        background-color: #252525 !important;
+    }
+    .dark\:text-dark {
+        color: #e0e0e0 !important;
+    }
+}

@@ -120,7 +120,7 @@ export function Contacts() {
                 >
                     <div className="flex flex-row">
                         <FontAwesomeIcon icon={faPhoneAlt} className="self-center mr-4" />
-                        <p className="text-lg">CALL US</p>
+                        <p className="text-xl">CALL US</p>
                     </div>
                 </motion.div>
             </a>
@@ -133,7 +133,7 @@ export function Contacts() {
                 >
                     <div className="flex flex-row">
                         <FontAwesomeIcon icon={faAt} className="self-center mr-3" />
-                        <p className="text-lg">EMAIL US</p>
+                        <p className="text-xl">EMAIL US</p>
                     </div>
                 </motion.div>
             </a>
