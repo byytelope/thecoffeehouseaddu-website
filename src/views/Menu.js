@@ -82,7 +82,7 @@ const Menu = React.memo(function Menu() {
         },
         {
             id: 8,
-            img: [IMGBrownies1, IMGBrownies2, IMGBrownies3],
+            img: [IMGBrownies3, IMGBrownies2, IMGBrownies1],
             name: "Chocolate-Fudge Brownies",
             description:
                 "Made from scratch and with lots of love, these delicious and gooey chocolate fudge brownies are a definite must-try for anyone with chocolate cravings.",

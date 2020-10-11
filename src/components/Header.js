@@ -2,10 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-import HeaderLogo from "../assets/img/HeaderLogo.webp";
-import "../assets/css/Logo.css";
-import "react-toastify/dist/ReactToastify.css";
-import "../assets/css/ToastDefault.css";
+import { ReactComponent as HeaderLogo } from "../assets/svg/HeaderLogo.svg";
 
 export default function Header() {
     return (
@@ -15,14 +12,10 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2.5 }}
         >
-            <img
-                className="photo"
-                src={HeaderLogo}
-                alt="Logo"
-                draggable="false"
-                width={1340}
-                height={1340}
-                onContextMenu={(e) => e.preventDefault()}
+            <HeaderLogo
+                className="transform scale-125 select-none fill-current text-tch-dark-surface-2 dark:text-tch-gray-md"
+                width="15rem"
+                height="15rem"
             />
         </motion.div>
     );
