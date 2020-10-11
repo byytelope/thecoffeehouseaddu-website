@@ -3,16 +3,17 @@ import { motion } from "framer-motion";
 
 import MenuCard from "../components/MenuCard";
 
-import IMGColdBrewTonic from "../assets/img/products/Cold_Brew_Tonic.webp";
-import IMGFilterCoffe from "../assets/img/products/Filter_Coffee.webp";
-import IMGSparklingCoffee from "../assets/img/products/Sparkling_Coffee.webp";
-import IMGJapaneseIcedCoffee from "../assets/img/products/Japanese_Cold_Brew.webp";
-import IMGVietnameseBrew from "../assets/img/products/Vietnamese_Brew.webp";
-import IMGKaishiMetaa from "../assets/img/products/Kaishi_Metaa.webp";
-import IMGClassicPeachMojito from "../assets/img/products/Classic_Peach_Mojito.webp";
-import IMGBrownies1 from "../assets/img/products/Chocolate-Fudge_Brownie_1.webp";
-import IMGBrownies2 from "../assets/img/products/Chocolate-Fudge_Brownie_2.webp";
-import IMGBrownies3 from "../assets/img/products/Chocolate-Fudge_Brownie_3.webp";
+import IMGColdBrewTonic from "../assets/img/products/ColdBrewTonic.webp";
+import IMGFilterCoffe from "../assets/img/products/FilterCoffee.webp";
+import IMGSparklingCoffee from "../assets/img/products/SparklingCoffee.webp";
+import IMGJapaneseIcedCoffee from "../assets/img/products/JapaneseColdBrew.webp";
+import IMGVietnameseBrew from "../assets/img/products/VietnameseBrew.webp";
+import IMGKaishiMetaa from "../assets/img/products/KaishiMetaa.webp";
+import IMGIrishLatte from "../assets/img/products/IrishLatte.webp";
+import IMGClassicPeachMojito from "../assets/img/products/ClassicPeachMojito.webp";
+import IMGBrownies1 from "../assets/img/products/ChocolateFudgeBrownie1.webp";
+import IMGBrownies2 from "../assets/img/products/ChocolateFudgeBrownie2.webp";
+import IMGBrownies3 from "../assets/img/products/ChocolateFudgeBrownie3.webp";
 
 const Menu = React.memo(function Menu() {
     const data = [
@@ -73,6 +74,15 @@ const Menu = React.memo(function Menu() {
         },
         {
             id: 7,
+            img: [IMGIrishLatte],
+            name: "Irish Latte",
+            description:
+                "Made with a shot of coffee, Irish cream and milk shaken together forming a creamy blend. This drink is perfect for all the chocolate lovers, delivering unmatched notes of chocolate and vanilla more decadent than anything you've ever tried.",
+            price: 50,
+            is_cold: true,
+        },
+        {
+            id: 8,
             img: [IMGClassicPeachMojito],
             name: "Classic Peach Mojito",
             description:
@@ -81,7 +91,7 @@ const Menu = React.memo(function Menu() {
             is_cold: true,
         },
         {
-            id: 8,
+            id: 9,
             img: [IMGBrownies3, IMGBrownies2, IMGBrownies1],
             name: "Chocolate-Fudge Brownies",
             description:
