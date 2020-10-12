@@ -141,10 +141,10 @@ const Menu = React.memo(function Menu() {
                 </p>
             </div>
             <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center space-y-2 md:space-y-0 lg:space-y-0 xl:space-y-0 md:space-x-6 lg:space-x-8 xl:space-x-8 font-header text-base text-tch-gray-dk dark:text-tch-gray-md pt-4 pb-12">
-                <div className="w-auto dark:bg-tch-dark-surface-1 shadow-md rounded-full pt-2 pb-1 px-4">
+                <div className="w-auto dark:bg-tch-dark-surface-1 shadow-md rounded-full pt-1 pb-1 px-4">
                     #ETHICALLYSOURCED
                 </div>
-                <div className="w-auto dark:bg-tch-dark-surface-1 shadow-md rounded-full pt-2 pb-1 px-4">
+                <div className="w-auto dark:bg-tch-dark-surface-1 shadow-md rounded-full pt-1 pb-1 px-4">
                     #SINGLEORIGINCOFFEE
                 </div>
             </div>

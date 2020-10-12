@@ -721,6 +721,10 @@ video {
   font-weight: 300;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -735,6 +739,10 @@ video {
 
 .h-0 {
   height: 0;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .text-base {
@@ -755,6 +763,10 @@ video {
 
 .m-12 {
   margin: 3rem;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .-m-1 {
@@ -788,6 +800,10 @@ video {
 
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .-mb-12 {
@@ -861,6 +877,10 @@ video {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
 }
 
 .pb-1 {
@@ -1230,6 +1250,10 @@ video {
     font-size: 1.5rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+  }
+
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1259,6 +1283,14 @@ video {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 4rem;
   }
 
   .lg\:px-24 {
@@ -1306,6 +1338,14 @@ video {
 
   .xl\:text-2xl {
     font-size: 1.5rem;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .xl\:text-6xl {
+    font-size: 4rem;
   }
 
   .xl\:max-w-sm {
