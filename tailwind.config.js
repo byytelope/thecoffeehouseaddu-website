@@ -1,17 +1,8 @@
 module.exports = {
-    experimental: {
-        darkModeVariant: true,
-    },
-    purge: {
-        mode: "layers",
-        layers: ["base", "components", "utilities"],
-        content: ["./src/App.js", "./src/components/*.js", "./src/views/*.js", "./src/pages/*.js"],
-    },
+    mode: "jit",
+    darkMode: "media",
+    purge: ["./src/**/*.js"],
     theme: {
-        future: {
-            purgeLayersByDefault: true,
-            removeDeprecatedGapUtilities: true,
-        },
         extend: {
             colors: {
                 facebook: "#1877F2",

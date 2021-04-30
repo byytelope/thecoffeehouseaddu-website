@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
-import HeaderLogo from "../components/HeaderLogo";
+import HeaderLogo from "./HeaderLogo";
 
 export default function Header(props) {
     return (
@@ -14,8 +13,8 @@ export default function Header(props) {
         >
             <HeaderLogo
                 className="transform scale-125 select-none fill-current text-tch-dark-surface-2 dark:text-tch-gray-md"
-                width="15rem"
-                height="15rem"
+                width="250px"
+                height="250px"
             />
         </motion.div>
     );

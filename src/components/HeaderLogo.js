@@ -1,14 +1,6 @@
-import React from "react";
-
-function HeaderLogo(props) {
+export default function HeaderLogo(props) {
     return (
-        <svg
-            id="HeaderLogo_svg__OBJECTS"
-            viewBox="0 0 581.2 420.59"
-            width="1em"
-            height="1em"
-            {...props}
-        >
+        <svg id="HeaderLogo_svg__OBJECTS" viewBox="0 0 581.2 420.59" {...props}>
             <defs id="HeaderLogo_svg__defs131">
                 <style id="style129">
                     {
@@ -275,5 +267,3 @@ function HeaderLogo(props) {
         </svg>
     );
 }
-
-export default HeaderLogo;

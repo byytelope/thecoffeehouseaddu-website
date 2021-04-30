@@ -1,10 +1,9 @@
-import React from "react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faSnowflake, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarousel from "./ImageCarousel";
 
 export default function MenuCard(props) {
     const descLength = props.cardDesc.length > 0;
@@ -13,9 +12,9 @@ export default function MenuCard(props) {
 
     return (
         <motion.div
-            className="flex flex-col justify-start xl:max-w-sm max-w-screen-sm dark:bg-tch-dark-surface-1 rounded-lg shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.025 }}
-            transition={{ type: "spring", stiffness: 400, damping: 50 }}
+            className="flex flex-col justify-start xl:max-w-sm max-w-screen-sm dark:bg-tch-dark-surface-1 rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-out duration-500"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", bounce: 0.5 }}
         >
             {showCarousel ? (
                 <ImageCarousel cardImages={props.cardImages} />
@@ -33,7 +32,7 @@ export default function MenuCard(props) {
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-xl xl:text-base text-tch-gray-dk dark:text-tch-gray-md text-left pt-4 pb-2 ${
+                    className={`text-base md:text-lg xl:text-base text-tch-gray-dk dark:text-tch-gray-md text-left pt-4 pb-2 ${
                         descLength ? "" : "hidden"
                     }`}
                 >

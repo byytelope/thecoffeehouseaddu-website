@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,7 +19,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a
                     href="https://facebook.com/The-Coffee-House-Addu-106094487875368"
@@ -36,7 +35,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a
                     href="https://instagram.com/thecoffeehouseaddu/"
@@ -52,7 +51,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a href="viber://chat?number=9607897068" target="_blank" rel="noopener noreferrer">
                     <div className="text-viber dark:text-tch-gray-md">
@@ -64,7 +63,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a
                     href="https://twitter.com/thecoffeehouseaddu"
@@ -80,7 +79,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a
                     href="https://telegram.me/thecoffeehouseaddu"
@@ -96,7 +95,7 @@ export function Socials() {
                 className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                transition={{ type: "spring", bounce: 0.5 }}
             >
                 <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
                     <div className="text-whatsapp dark:text-tch-gray-md">
@@ -113,10 +112,10 @@ export function Contacts() {
         <div className="grid gap-4 grid-cols-2 select-none highlight-none">
             <a href="tel:+960-7897068">
                 <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-shadow duration-500 ease-out px-4 py-4"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 250 }}
+                    transition={{ type: "spring", bounce: 0.5 }}
                 >
                     <div className="flex flex-row">
                         <FontAwesomeIcon icon={faPhoneAlt} className="self-center mr-4" />
@@ -126,10 +125,10 @@ export function Contacts() {
             </a>
             <a href="mailto:hello@thecoffeehouseaddu.com" target="_blank" rel="noopener noreferrer">
                 <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-4"
+                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-shadow duration-500 ease-out px-4 py-4"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 250 }}
+                    transition={{ type: "spring", bounce: 0.5 }}
                 >
                     <div className="flex flex-row">
                         <FontAwesomeIcon icon={faAt} className="self-center mr-3" />

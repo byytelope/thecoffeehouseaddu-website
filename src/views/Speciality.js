@@ -1,12 +1,10 @@
-import React from "react";
-
 import MenuCard from "../components/MenuCard";
 
 import IMGKisinga from "../assets/img/specialty/Kisinga.webp";
 import IMGBelaVista from "../assets/img/specialty/Bela_Vista.webp";
 import IMGCapimBranco from "../assets/img/specialty/Capim_Branco.webp";
 
-export default function Menu() {
+export default function Speciality() {
     const data = [
         {
             id: 1,
@@ -45,8 +43,8 @@ export default function Menu() {
     return (
         <div>
             <div className="text-center font-semibold text-tch-gray-dk dark:text-tch-gray-md text-3xl xl:text-2xl pt-24 pb-20 xl:p-24">
-                <p>OUR SPECIALTY</p>
-                <p className="text-xl font-light pt-8 -mb-12 mx-12">
+                <p>OUR SPECIALITY</p>
+                <p className="text-xl font-light pt-8 -mb-12 mx-12 max-w-prose inline-block">
                     We ensure ethical fair-trade at all stages of the production process.
                 </p>
             </div>

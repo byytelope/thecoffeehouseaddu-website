@@ -1,38 +1,41 @@
 {
     "name": "the-coffee-house-addu",
-    "version": "1.5.5",
+    "version": "1.6.0",
     "private": true,
     "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^1.2.30",
-        "@fortawesome/free-brands-svg-icons": "^5.14.0",
-        "@fortawesome/free-solid-svg-icons": "^5.14.0",
-        "@fortawesome/react-fontawesome": "^0.1.11",
+        "@fortawesome/fontawesome-svg-core": "^1.2.35",
+        "@fortawesome/free-brands-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
+        "@fortawesome/react-fontawesome": "^0.1.14",
         "@popmotion/popcorn": "^0.4.4",
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "autoprefixer": "^9.8.6",
-        "framer-motion": "^2.6.12",
-        "postcss-cli": "^7.1.1",
+        "@testing-library/jest-dom": "^5.12.0",
+        "@testing-library/react": "^11.2.6",
+        "@testing-library/user-event": "^13.1.8",
+        "autoprefixer": "^10.2.5",
+        "framer-motion": "^4.1.11",
+        "postcss": "^8.2.13",
+        "postcss-cli": "^8.3.1",
         "prop-types": "^15.7.2",
-        "react": "^16.13.1",
-        "react-bottom-scroll-listener": "^4.1.0",
-        "react-dom": "^16.13.1",
-        "react-icons": "^3.10.0",
-        "react-scripts": "3.4.3",
-        "tailwindcss": "^1.8.10",
-        "wouter": "^2.5.1"
+        "react": "^17.0.2",
+        "react-bottom-scroll-listener": "^5.0.0",
+        "react-dom": "^17.0.2",
+        "react-scripts": "^4.0.3",
+        "tailwindcss": "^2.1.2",
+        "wouter": "^2.7.4"
     },
     "scripts": {
-        "build:css": "postcss src/index.css -o src/App.css",
-        "watch:css": "postcss src/index.css -o src/App.css -w",
-        "start": "yarn build:css && react-scripts start",
+        "build:css": "TAILWIND_MODE=build postcss src/index.css -o src/App.css --verbose",
+        "watch:css": "TAILWIND_MODE=watch postcss src/index.css -o src/App.css --verbose -w",
+        "start": "react-scripts start & yarn watch:css",
         "build": "yarn build:css && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {
-        "extends": "react-app"
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
     },
     "browserslist": {
         "production": [
@@ -45,11 +48,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "devDependencies": {
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-react": "^7.20.5",
-        "prettier": "^2.0.5",
-        "webpack-bundle-analyzer": "^3.9.0"
     }
 }

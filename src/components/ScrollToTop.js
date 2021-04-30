@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import BottomScrollListener from "react-bottom-scroll-listener";
-import { TiArrowUp } from "react-icons/ti";
-
-import "../assets/css/ScrollBtn.css";
+import { BottomScrollListener } from "react-bottom-scroll-listener";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function ScrollToTop() {
     const [showBtn, setShowBtn] = useState(false);
@@ -25,8 +24,7 @@ export default function ScrollToTop() {
             const isPageTop = window.pageYOffset <= 800;
 
             if (isScrollingUp && !isPageTop) {
-                // eslint-disable-next-line
-                btnBool = true;
+                btnBool = true; // eslint-disable-line
             }
 
             setShowBtn(btnBool);
@@ -36,14 +34,14 @@ export default function ScrollToTop() {
         window.addEventListener("scroll", handleScroll, { passive: true });
 
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastYPos]);
+    }, [lastYPos, btnBool]);
 
     return (
         <div className="flex justify-center">
             <motion.div
                 className={`${
                     showBtn ? "" : "pointer-events-none"
-                } scrollBtn fixed z-50 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-white dark:hover:bg-tch-gray-dk top-0 mb-20 m-12 opacity-75 select-none`}
+                } hover:shadow-md transition-all duration-500 ease-out fixed z-50 flex justify-center cursor-pointer rounded-full bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-white dark:hover:bg-tch-gray-dk top-0 mb-20 mt-12 opacity-75 select-none`}
                 animate={{ opacity: showBtn ? 0.85 : 0 }}
                 initial={{ opacity: 0 }}
                 transition={{ opacity: { duration: 0.4 } }}
@@ -51,8 +49,14 @@ export default function ScrollToTop() {
                 whileTap={{ opacity: 1 }}
                 onClick={scrollTop}
             >
-                <TiArrowUp className="self-center text-tch-gray-dk dark:text-tch-gray-md" size="2.5rem" />
-                <p className="self-center text-tch-gray-dk dark:text-tch-gray-md font-extrabold pr-4">Scroll to top</p>
+                <FontAwesomeIcon
+                    icon={faArrowUp}
+                    className="text-tch-gray-dk dark:text-tch-gray-md m-3"
+                    size="lg"
+                />
+                <p className="self-center text-tch-gray-dk dark:text-tch-gray-md font-extrabold pr-4">
+                    Scroll to top
+                </p>
             </motion.div>
             <BottomScrollListener onBottom={handleOnDocBottom} />
         </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { faMapPin } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,10 +23,10 @@ export default function Footer() {
                 className="self-center select-none highlight-none"
             >
                 <motion.div
-                    className="w-auto font-bold text-center text-tch-gray-dk dark:text-tch-gray-md self-center rounded-full hover:shadow-md bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk cursor-pointer transition-colors transition-shadow duration-150 ease-in-out px-4 py-1"
+                    className="w-auto font-bold text-center text-tch-gray-dk dark:text-tch-gray-md self-center rounded-full hover:shadow-md bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk cursor-pointer transition-shadow duration-500 ease-out px-4 py-1"
                     whileHover={{ scale: 1.025 }}
                     whileTap={{ scale: 0.975 }}
-                    transition={{ type: "spring", stiffness: 250 }}
+                    transition={{ type: "spring", bounce: 0.5 }}
                 >
                     <FontAwesomeIcon icon={faMapPin} />
                     &nbsp;&nbsp;RADHEBAIGE, HITHADHOO <br />

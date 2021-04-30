@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
 
@@ -22,8 +21,8 @@ export default function FourOFour() {
         },
     };
     const animLines = {
-        initial: { opacity: 0, y: 20},
-        animate: { opacity: 1, y: 0},
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
     };
 
     const Button = () => {
@@ -40,11 +39,11 @@ export default function FourOFour() {
                 }}
             >
                 <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md text-1.5xl font-header cursor-pointer transition-colors transition-shadow duration-150 ease-in-out py-4 px-6"
+                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md text-1.5xl font-header cursor-pointer transition-shadow duration-500 ease-out py-4 px-6"
                     onClick={() => setLocation("/")}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 250 }}
+                    transition={{ type: "spring", bounce: 0.5 }}
                 >
                     <p>BACK TO HOME</p>
                 </motion.div>

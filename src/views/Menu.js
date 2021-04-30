@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 import { motion } from "framer-motion";
 
 import MenuCard from "../components/MenuCard";
@@ -11,11 +11,11 @@ import IMGVietnameseBrew from "../assets/img/products/VietnameseBrew.webp";
 import IMGKaishiMetaa from "../assets/img/products/KaishiMetaa.webp";
 import IMGIrishLatte from "../assets/img/products/IrishLatte.webp";
 import IMGClassicPeachMojito from "../assets/img/products/ClassicPeachMojito.webp";
-import IMGBrownies1 from "../assets/img/products/ChocolateFudgeBrownie1.webp";
-import IMGBrownies2 from "../assets/img/products/ChocolateFudgeBrownie2.webp";
-import IMGBrownies3 from "../assets/img/products/ChocolateFudgeBrownie3.webp";
+// import IMGBrownies1 from "../assets/img/products/ChocolateFudgeBrownie1.webp";
+// import IMGBrownies2 from "../assets/img/products/ChocolateFudgeBrownie2.webp";
+// import IMGBrownies3 from "../assets/img/products/ChocolateFudgeBrownie3.webp";
 
-const Menu = React.memo(function Menu() {
+const Menu = memo(function Menu() {
     const data = [
         {
             id: 1,
@@ -90,16 +90,16 @@ const Menu = React.memo(function Menu() {
             price: 45,
             is_cold: true,
         },
-        {
-            id: 9,
-            img: [IMGBrownies3, IMGBrownies2, IMGBrownies1],
-            name: "Chocolate-Fudge Brownies",
-            description:
-                "Made from scratch and with lots of love, these delicious and gooey chocolate fudge brownies are a definite must-try for anyone with chocolate cravings.",
-            price: 30,
-            is_food: true,
-            sale_price: 27,
-        },
+        // {
+        //     id: 9,
+        //     img: [IMGBrownies3, IMGBrownies2, IMGBrownies1],
+        //     name: "Chocolate-Fudge Brownies",
+        //     description:
+        //         "Made from scratch and with lots of love, these delicious and gooey chocolate fudge brownies are a definite must-try for anyone with chocolate cravings.",
+        //     price: 30,
+        //     is_food: true,
+        //     sale_price: 27,
+        // },
     ];
 
     const Cards = () => {
@@ -134,7 +134,7 @@ const Menu = React.memo(function Menu() {
         <div>
             <div className="text-center font-semibold text-tch-gray-dk dark:text-tch-gray-md text-3xl xl:text-2xl pt-24 pb-20">
                 <p>OUR PRODUCTS</p>
-                <p className="text-xl font-light pt-8 -mb-12 mx-12">
+                <p className="text-xl font-light pt-8 -mb-12 mx-12 max-w-prose inline-block">
                     Single-origin coffee brewed to perfection in the heart of Addu City, with
                     flavours from France, Brazil, Uganda and Ethiopia and our very own Maldives. We
                     are here to change the coffee-culture in Addu.

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 
 import Button from "../components/Button";
@@ -8,20 +8,20 @@ import ScrollToTop from "../components/ScrollToTop";
 import About from "../views/About";
 import Footer from "../views/Footer";
 import Menu from "../views/Menu";
-import Specialty from "../views/Specialty";
+import Speciality from "../views/Speciality";
 
 import "../assets/css/HighlightNone.css";
 
 export default function Home() {
     const menuRef = useRef();
-    const specialtyRef = useRef();
+    const specialityRef = useRef();
     const aboutRef = useRef();
     const footerRef = useRef();
 
     const btnData = [
         { id: 1, text: "OUR STORY", ref: aboutRef },
         { id: 2, text: "PRODUCTS", ref: menuRef },
-        { id: 3, text: "SPECIALTY", ref: specialtyRef },
+        { id: 3, text: "SPECIALTY", ref: specialityRef },
         { id: 4, text: "CONTACT US", ref: footerRef },
     ];
 
@@ -39,8 +39,8 @@ export default function Home() {
                 <div ref={menuRef}>
                     <Menu />
                 </div>
-                <div ref={specialtyRef}>
-                    <Specialty />
+                <div ref={specialityRef}>
+                    <Speciality />
                 </div>
                 <div ref={aboutRef}>
                     <About />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import PropTypes from "prop-types";
 import { wrap } from "@popmotion/popcorn";
@@ -136,7 +136,7 @@ export default function ImageCarousel(props) {
         }, 4000);
 
         return () => clearInterval(interval);
-    }, [currentPage]);
+    }, [currentPage, pages.length]); // eslint-disable-line
 
     return (
         <>
