@@ -10,132 +10,77 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
-import "../assets/css/HighlightNone.css";
+import CustomButton from "./CustomButton";
+
+const SocialBtn = ({ btnData }) => (
+    <motion.button
+        className="flex flex-col h-0 justify-center rounded-full cursor-pointer focus:outline-none"
+        whileFocus={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", bounce: 0.5 }}
+        onClick={() => window.open(btnData.link, "_blank")}
+    >
+        <div className={`${btnData.color} dark:text-tch-gray-md`}>
+            <FontAwesomeIcon icon={btnData.icon} size="2x" />
+        </div>
+    </motion.button>
+);
+
+const socialIcons = [
+    {
+        icon: faFacebook,
+        link: "https://facebook.com/The-Coffee-House-Addu-106094487875368",
+        color: "text-facebook",
+    },
+    {
+        icon: faInstagram,
+        link: "https://instagram.com/thecoffeehouseaddu/",
+        color: "text-instagram",
+    },
+    {
+        icon: faViber,
+        link: "viber://chat?number=9607897068",
+        color: "text-viber",
+    },
+    {
+        icon: faTwitter,
+        link: "https://twitter.com/thecoffeehouseaddu",
+        color: "text-twitter",
+    },
+    {
+        icon: faTelegramPlane,
+        link: "https://telegram.me/thecoffeehouseaddu",
+        color: "text-telegram",
+    },
+    {
+        icon: faWhatsapp,
+        link: "https://wa.me/9607897068",
+        color: "text-whatsapp",
+    },
+];
 
 export function Socials() {
     return (
         <div className="grid gap-16 grid-cols-3 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6">
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a
-                    href="https://facebook.com/The-Coffee-House-Addu-106094487875368"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div className="text-facebook dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faFacebook} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a
-                    href="https://instagram.com/thecoffeehouseaddu/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div className="text-instagram dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faInstagram} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a href="viber://chat?number=9607897068" target="_blank" rel="noopener noreferrer">
-                    <div className="text-viber dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faViber} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a
-                    href="https://twitter.com/thecoffeehouseaddu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div className="text-twitter dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faTwitter} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a
-                    href="https://telegram.me/thecoffeehouseaddu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <div className="text-telegram dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faTelegramPlane} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
-            <motion.div
-                className="flex flex-col h-0 justify-center rounded-full cursor-pointer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", bounce: 0.5 }}
-            >
-                <a href="https://wa.me/9607897068" target="_blank" rel="noopener noreferrer">
-                    <div className="text-whatsapp dark:text-tch-gray-md">
-                        <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-                    </div>
-                </a>
-            </motion.div>
+            {socialIcons.map((data, i) => (
+                <SocialBtn key={i} btnData={data} />
+            ))}
         </div>
     );
 }
 
 export function Contacts() {
     return (
-        <div className="grid gap-4 grid-cols-2 select-none highlight-none">
-            <a href="tel:+960-7897068">
-                <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-shadow duration-500 ease-out px-4 py-4"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", bounce: 0.5 }}
-                >
-                    <div className="flex flex-row">
-                        <FontAwesomeIcon icon={faPhoneAlt} className="self-center mr-4" />
-                        <p className="text-xl">CALL US</p>
-                    </div>
-                </motion.div>
-            </a>
-            <a href="mailto:hello@thecoffeehouseaddu.com" target="_blank" rel="noopener noreferrer">
-                <motion.div
-                    className="w-full-sm rounded-lg bg-tch-gray-lt dark:bg-tch-dark-surface-2 hover:bg-tch-gray-md dark:hover:bg-tch-gray-dk hover:shadow-lg text-center text-tch-gray-dk dark:text-tch-gray-md font-header cursor-pointer transition-shadow duration-500 ease-out px-4 py-4"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", bounce: 0.5 }}
-                >
-                    <div className="flex flex-row">
-                        <FontAwesomeIcon icon={faAt} className="self-center mr-3" />
-                        <p className="text-xl">EMAIL US</p>
-                    </div>
-                </motion.div>
-            </a>
+        <div className="grid gap-4 grid-cols-2 select-none">
+            <CustomButton
+                btnData={{ text: "CALL US", icon: faPhoneAlt }}
+                onClick={() => window.open("tel:+960-7897068", "_self")}
+            />
+            <CustomButton
+                btnData={{ text: "EMAIL US", icon: faAt }}
+                onClick={() => window.open("mailto:hello@thecoffeehouseaddu.com", "_blank")}
+            />
         </div>
     );
 }

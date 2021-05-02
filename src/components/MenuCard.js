@@ -12,7 +12,7 @@ export default function MenuCard(props) {
 
     return (
         <motion.div
-            className="flex flex-col justify-start xl:max-w-sm max-w-screen-sm dark:bg-tch-dark-surface-1 rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-out duration-500"
+            className="flex flex-col justify-start xl:max-w-sm dark:bg-tch-dark-surface-1 rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-out duration-500"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", bounce: 0.5 }}
         >
@@ -28,11 +28,11 @@ export default function MenuCard(props) {
                 />
             )}
             <div className="text-center px-6 py-4 flex-grow">
-                <div className="font-semibold text-tch-gray-dk text-xl dark:text-tch-gray-md md:text-2xl xl:text-lg mb-2">
+                <div className="tracking-wide font-semibold text-tch-gray-dk text-xl dark:text-tch-gray-md md:text-2xl xl:text-lg mb-2">
                     {props.cardName}
                 </div>
                 <p
-                    className={`text-base md:text-lg xl:text-base text-tch-gray-dk dark:text-tch-gray-md text-left pt-4 pb-2 ${
+                    className={`tracking-wide text-base md:text-lg xl:text-base text-tch-gray-dk dark:text-tch-gray-md text-left pt-4 pb-2 ${
                         descLength ? "" : "hidden"
                     }`}
                 >

@@ -42,14 +42,14 @@ export default function Speciality() {
 
     return (
         <div>
-            <div className="text-center font-semibold text-tch-gray-dk dark:text-tch-gray-md text-3xl xl:text-2xl pt-24 pb-20 xl:p-24">
+            <div className="tracking-wide text-center font-semibold text-tch-gray-dk dark:text-tch-gray-md text-2xl pt-24 pb-20 xl:p-24">
                 <p>OUR SPECIALITY</p>
                 <p className="text-xl font-light pt-8 -mb-12 mx-12 max-w-prose inline-block">
                     We ensure ethical fair-trade at all stages of the production process.
                 </p>
             </div>
-            <div className="flex justify-center p-6 px-8 sm:px-24 md:px-24 lg:px-24 xl:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-24 pb-8">
+            <div className="flex justify-center p-6 px-4 xs:px-8 sm:px-24 md:px-8 lg:px-24 xl:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-24 pb-8">
                     <Cards />
                 </div>
             </div>
