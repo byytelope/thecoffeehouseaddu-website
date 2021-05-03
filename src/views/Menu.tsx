@@ -103,31 +103,35 @@ const Menu = memo(function Menu() {
     ];
 
     const Cards = () => {
-        return data.map((content) => (
-            <motion.div
-                key={content.id}
-                className="flex"
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                    type: "spring",
-                    delay: 2.2 + content.id / 10,
-                    stiffness: 200,
-                }}
-            >
-                <MenuCard
-                    key={content.id}
-                    cardImages={content.img}
-                    cardName={content.name}
-                    cardDesc={content.description}
-                    cardPrice={content.price}
-                    cardSalePrice={content.sale_price}
-                    cardIsCold={content.is_cold}
-                    cardIsHot={content.is_hot}
-                    cardIsFood={content.is_food}
-                />
-            </motion.div>
-        ));
+        return (
+            <>
+                {data.map((content) => (
+                    <motion.div
+                        key={content.id}
+                        className="flex"
+                        initial={{ opacity: 0, y: 25 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            delay: 2.2 + content.id / 10,
+                            stiffness: 200,
+                        }}
+                    >
+                        <MenuCard
+                            key={content.id}
+                            cardImages={content.img}
+                            cardName={content.name}
+                            cardDesc={content.description}
+                            cardPrice={content.price}
+                            // cardSalePrice={content.sale_price}
+                            cardIsCold={content.is_cold}
+                            cardIsHot={content.is_hot}
+                            // cardIsFood={content.is_food}
+                        />
+                    </motion.div>
+                ))}
+            </>
+        );
     };
 
     return (

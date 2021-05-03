@@ -1,7 +1,7 @@
 module.exports = {
     mode: "jit",
     darkMode: "media",
-    purge: ["./src/**/*.js"],
+    purge: ["./src/**/*.js", "./src/**/*.tsx"],
     theme: {
         screens: {
             xs: "360px",

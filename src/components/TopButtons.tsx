@@ -1,10 +1,22 @@
+import React from "react";
 import { motion } from "framer-motion";
 
 import CustomButton from "./CustomButton";
 
-export default function TopButtons(props) {
+interface TopButtonsProps {
+    btnData: Array<BtnDataInterface>;
+}
+
+interface BtnDataInterface {
+    id: number;
+    text: string;
+    ref: React.RefObject<HTMLElement>;
+}
+
+export default function TopButtons(props: TopButtonsProps) {
     const btnData = props.btnData;
-    const handleOnClick = (ref) => window.scrollTo({ behavior: "smooth", top: ref.offsetTop });
+    const handleOnClick = ({ current }: React.RefObject<HTMLElement>) =>
+        window.scrollTo({ behavior: "smooth", top: current?.offsetTop });
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 xl:gap-8">
@@ -20,11 +32,7 @@ export default function TopButtons(props) {
                         delay: 1 + data.id / 10,
                     }}
                 >
-                    <CustomButton
-                        btnData={data}
-                        onClick={() => handleOnClick(data.ref.current && data.ref.current)}
-                        key={btnData.id}
-                    />
+                    <CustomButton btnData={data} onClick={() => handleOnClick(data.ref)} />
                 </motion.div>
             ))}
         </div>

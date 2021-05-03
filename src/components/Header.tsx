@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
 import HeaderLogo from "./HeaderLogo";
 
-export default function Header(props) {
+interface HeaderProps {
+    delay: number;
+}
+
+export default function Header(props: HeaderProps) {
     return (
         <motion.div
             className="flex justify-center w-full py-8 xs:py-16"
@@ -19,7 +22,3 @@ export default function Header(props) {
         </motion.div>
     );
 }
-
-Header.propTypes = {
-    delay: PropTypes.number,
-};

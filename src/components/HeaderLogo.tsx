@@ -1,4 +1,10 @@
-export default function HeaderLogo(props) {
+interface HeaderLogoProps {
+    height: string;
+    width: string;
+    className: string;
+}
+
+export default function HeaderLogo(props: HeaderLogoProps) {
     return (
         <svg id="HeaderLogo_svg__OBJECTS" viewBox="0 0 581.2 420.59" {...props}>
             <defs id="HeaderLogo_svg__defs131">
@@ -22,9 +28,6 @@ export default function HeaderLogo(props) {
             >
                 <tspan
                     id="HeaderLogo_svg__tspan135"
-                    style={{
-                        InkscapeFontSpecification: "'Assistant Bold'",
-                    }}
                     fontStyle="normal"
                     fontVariant="normal"
                     fontWeight={700}
@@ -46,9 +49,6 @@ export default function HeaderLogo(props) {
                 fill="current"
             >
                 <tspan
-                    style={{
-                        InkscapeFontSpecification: "Assistant",
-                    }}
                     id="HeaderLogo_svg__tspan248"
                     fontStyle="normal"
                     fontVariant="normal"
@@ -228,9 +228,6 @@ export default function HeaderLogo(props) {
                 fill="current"
             >
                 <tspan
-                    style={{
-                        InkscapeFontSpecification: "'Assistant Bold'",
-                    }}
                     id="HeaderLogo_svg__tspan242"
                     fontStyle="normal"
                     fontVariant="normal"
@@ -251,9 +248,6 @@ export default function HeaderLogo(props) {
                 fill="current"
             >
                 <tspan
-                    style={{
-                        InkscapeFontSpecification: "'Assistant Bold'",
-                    }}
                     id="HeaderLogo_svg__tspan244"
                     fontStyle="normal"
                     fontVariant="normal"

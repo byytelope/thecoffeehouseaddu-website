@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugHot, faSnowflake, faUtensils } from "@fortawesome/free-solid-svg-icons";
 
-import ImageCarousel from "./ImageCarousel";
+interface MenuCardProps {
+    cardImages: Array<string>;
+    cardName: string;
+    cardDesc: string;
+    cardPrice?: number;
+    cardSalePrice?: number;
+    cardIsHot?: boolean;
+    cardIsCold?: boolean;
+    cardIsFood?: boolean;
+}
 
-export default function MenuCard(props) {
+export default function MenuCard(props: MenuCardProps) {
     const descLength = props.cardDesc.length > 0;
     const showPrice = props.cardPrice !== undefined;
-    const showCarousel = props.cardImages.length > 1;
 
     return (
         <motion.div
@@ -16,17 +23,13 @@ export default function MenuCard(props) {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", bounce: 0.5 }}
         >
-            {showCarousel ? (
-                <ImageCarousel cardImages={props.cardImages} />
-            ) : (
-                <img
-                    className="w-full rounded-lg"
-                    src={props.cardImages[0]}
-                    alt={props.cardName}
-                    draggable="false"
-                    onContextMenu={(e) => e.preventDefault()}
-                />
-            )}
+            <img
+                className="w-full rounded-lg"
+                src={props.cardImages[0]}
+                alt={props.cardName}
+                draggable="false"
+                onContextMenu={(e) => e.preventDefault()}
+            />
             <div className="text-center px-6 py-4 flex-grow">
                 <div className="tracking-wide font-semibold text-tch-gray-dk text-xl dark:text-tch-gray-md md:text-2xl xl:text-lg mb-2">
                     {props.cardName}
@@ -76,14 +79,3 @@ export default function MenuCard(props) {
         </motion.div>
     );
 }
-
-MenuCard.propTypes = {
-    cardImages: PropTypes.array,
-    cardName: PropTypes.string,
-    cardDesc: PropTypes.string,
-    cardPrice: PropTypes.number,
-    cardSalePrice: PropTypes.number,
-    cardIsHot: PropTypes.bool,
-    cardIsCold: PropTypes.bool,
-    cardIsFood: PropTypes.bool,
-};

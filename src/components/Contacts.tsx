@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import {
     faInstagram,
     faFacebook,
@@ -12,7 +13,15 @@ import { faAt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
 import CustomButton from "./CustomButton";
 
-const SocialBtn = ({ btnData }) => (
+interface SocialBtnProps {
+    btnData: {
+        icon: IconProp;
+        link?: string;
+        color?: string;
+    };
+}
+
+const SocialBtn = ({ btnData }: SocialBtnProps) => (
     <motion.button
         className="flex flex-col h-0 justify-center rounded-full cursor-pointer focus:outline-none"
         whileFocus={{ scale: 1.1 }}

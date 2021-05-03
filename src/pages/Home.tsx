@@ -11,10 +11,10 @@ import Menu from "../views/Menu";
 import Speciality from "../views/Speciality";
 
 export default function Home() {
-    const menuRef = useRef();
-    const specialityRef = useRef();
-    const aboutRef = useRef();
-    const footerRef = useRef();
+    const menuRef = useRef(null);
+    const specialityRef = useRef(null);
+    const aboutRef = useRef(null);
+    const footerRef = useRef(null);
 
     const btnData = [
         { id: 1, text: "OUR STORY", ref: aboutRef },

@@ -5,7 +5,7 @@ import { wrap } from "@popmotion/popcorn";
 
 const xOffset = 10;
 const variants = {
-    enter: (direction) => ({
+    enter: (direction: number) => ({
         x: direction > 0 ? xOffset : -xOffset,
         opacity: 0,
     }),
@@ -14,13 +14,13 @@ const variants = {
         opacity: 1,
         transition: { delay: 0.3, type: "spring" },
     },
-    exit: (direction) => ({
+    exit: (direction: number) => ({
         x: direction > 0 ? -xOffset : xOffset,
         opacity: 0,
     }),
 };
 
-const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
+const Slides = ({ currentPage, setPage, direction, imageList, pages }: SlidesProps) => {
     const hasPaginated = useRef(false);
 
     const Images = () => {
@@ -47,7 +47,7 @@ const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
         );
     };
 
-    const detectPaginationGesture = (e, { offset }) => {
+    const detectPaginationGesture = (e: undefined, { offset }) => {
         if (hasPaginated.current) return;
         let newPage = currentPage;
         const threshold = xOffset / 2;
@@ -85,7 +85,7 @@ const Slides = ({ currentPage, setPage, direction, imageList, pages }) => {
     );
 };
 
-const Pagination = ({ currentPage, setPage, pages }) => {
+const Pagination = ({ currentPage, setPage, pages }: PaginationProps) => {
     // Wrap all the pagination dots with AnimateSharedPresence so we can detect
     // when dots with a layoutId are removed/added
     return (
@@ -152,23 +152,19 @@ export default function ImageCarousel(props) {
     );
 }
 
-ImageCarousel.propTypes = {
-    cardImages: PropTypes.array,
-};
+interface SlidesProps {
+    currentPage: number;
+    direction: number;
+    setPage: () => void;
+    imageList: Array<string>;
+    pages: Array<number>;
+}
 
-Slides.propTypes = {
-    currentPage: PropTypes.number,
-    direction: PropTypes.number,
-    setPage: PropTypes.func,
-    imageList: PropTypes.array,
-    pages: PropTypes.array,
-};
-
-Pagination.propTypes = {
-    currentPage: PropTypes.number,
-    setPage: PropTypes.func,
-    pages: PropTypes.array,
-};
+interface PaginationProps {
+    currentPage: number;
+    setPage: () => void;
+    pages: Array<number>;
+}
 
 Dot.propTypes = {
     isSelected: PropTypes.bool,

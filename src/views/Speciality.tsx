@@ -30,14 +30,18 @@ export default function Speciality() {
     ];
 
     const Cards = () => {
-        return data.map((content) => (
-            <MenuCard
-                key={content.id}
-                cardImages={content.img}
-                cardName={content.name}
-                cardDesc={content.description}
-            />
-        ));
+        return (
+            <>
+                {data.map((content) => (
+                    <MenuCard
+                        key={content.id}
+                        cardImages={content.img}
+                        cardName={content.name}
+                        cardDesc={content.description}
+                    />
+                ))}
+            </>
+        );
     };
 
     return (
